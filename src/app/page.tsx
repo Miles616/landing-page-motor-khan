@@ -1,3 +1,5 @@
+
+'use client';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
@@ -5,23 +7,7 @@ import { Phone, MapPin, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
-
-const WhatsAppIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="24"
-    height="24"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    {...props}
-  >
-    <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21h.01c5.46 0 9.91-4.45 9.91-9.91s-4.45-9.91-9.91-9.91zM17.16 14.3c-.2-.1-.59-.29-.68-.33-.09-.03-.16-.05-.24-.05-.08 0-.16.03-.24.1l-.4.48c-.08.1-.18.13-.28.1-.1 0-.23-.04-.5-.18-.48-.24-1.1-1.02-1.18-1.12s-.08-.15 0-.23l.1-.13c.08-.08.13-.18.18-.28.05-.1.03-.18 0-.25-.03-.08-.15-.38-.2-.53-.06-.15-.13-.13-.18-.13h-.15c-.08 0-.2.03-.3.13-.1.1-.38.35-.38.85s.38 1 .43 1.08c.05.08.75 1.23 1.83 1.7.98.44 1.18.35 1.4.33.23-.03.59-.24.68-.48.08-.23.08-.43.05-.48-.03-.05-.08-.08-.18-.13z" />
-  </svg>
-);
+import { IconBrandWhatsapp } from '@tabler/icons-react';
 
 
 export default function Home() {
@@ -98,7 +84,7 @@ export default function Home() {
                 <a href="tel:+919876543210"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
               </Button>
               <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
-                <a href="https://wa.me/919876543210" target="_blank"><WhatsAppIcon className="mr-2 h-4 w-4" /> WhatsApp</a>
+                <a href="https://wa.me/919876543210" target="_blank"><IconBrandWhatsapp className="mr-2 h-4 w-4" /> WhatsApp</a>
               </Button>
             </div>
             <div className="mt-8 space-y-4 max-w-2xl mx-auto">
