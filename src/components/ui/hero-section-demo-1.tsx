@@ -96,7 +96,7 @@ export default function HeroSectionOne() {
         >
           <div className="w-full overflow-hidden rounded-xl border border-border">
             <Image
-              src="https://images.unsplash.com/photo-1617800018821-235880183a54?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://delhi.motorkhan.com/images/about/motor-khan-rithala-rohini-delhi-black-car.jpg"
               alt="Car repair in progress"
               className="aspect-[16/9] h-auto w-full object-cover"
               height={1000}
@@ -114,7 +114,13 @@ const Navbar = () => {
   return (
     <nav className="flex w-full items-center justify-between border-t border-b border-border px-4 py-4">
       <div className="flex items-center gap-2">
-        <div className="size-7 rounded-full bg-gradient-to-br from-primary to-accent" />
+        <Image
+          src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png"
+          alt="Motor Khan Logo"
+          width={40}
+          height={40}
+          className="size-10"
+        />
         <h1 className="text-base font-bold md:text-2xl text-foreground">
           Motor Khan
         </h1>

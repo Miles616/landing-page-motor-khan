@@ -65,7 +65,7 @@ export default function Home() {
         </section>
 
         {/* Contact Info Section */}
-        <section className="w-full py-12 md:py-24 bg-secondary">
+        <section className="w-full py-12 md:py-24 bg-background">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">
