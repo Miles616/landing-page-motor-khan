@@ -153,7 +153,7 @@ export default function Home() {
                     <Globe className="h-4 w-4" /> Main Website
                 </a>
                 <p>
-                  © {new Date().getFullYear()} Motor Khan. All Rights Reserved.
+                  © {new Date().getFullYear()} <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">Motor Khan</a>. All Rights Reserved.
                 </p>
             </div>
         </div>
