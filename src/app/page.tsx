@@ -150,7 +150,7 @@ export default function Home() {
             </div>
             <div className="flex flex-col items-center md:items-end gap-2 text-sm">
                 <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-primary">
-                    Main Website <Globe className="h-4 w-4" />
+                    <Globe className="h-4 w-4" /> Main Website
                 </a>
                 <p>
                   © {new Date().getFullYear()} Motor Khan. All Rights Reserved.
