@@ -133,7 +133,8 @@ export const SkeletonOne = () => {
             {images.map((src, index) => (
               <CarouselItem key={index}>
                 <div className="p-1">
-                    <div className="relative aspect-square w-full h-full overflow-hidden rounded-md">
+                  <div className="p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 rounded-xl overflow-hidden">
+                    <div className="relative aspect-square w-full h-full overflow-hidden rounded-lg">
                       <Image
                         src={src}
                         alt="Car service image"
@@ -141,6 +142,7 @@ export const SkeletonOne = () => {
                         className="object-cover"
                       />
                     </div>
+                  </div>
                 </div>
               </CarouselItem>
             ))}
