@@ -27,25 +27,25 @@ export default function FeaturesSectionDemo() {
       className: "border-b col-span-1 lg:col-span-2 dark:border-neutral-800",
     },
     {
+        title: "Car Buy & Sell",
+        description:
+          "Looking to buy or sell a car? We offer a hassle-free experience with fair pricing and a wide selection of quality vehicles.",
+        skeleton: <SkeletonFive />,
+        className: "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
+    },
+    {
       title: "Our Workshop in Action",
       description:
         "Watch a tour of our workshop and see our expert technicians at work. We take pride in our craft and transparency.",
       skeleton: <SkeletonThree />,
       className:
-        "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
+        "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
     {
         title: "Trusted Since 1995",
         description:
           "With decades of experience serving Delhi, we have built a reputation for reliable service and customer satisfaction. Your car is in safe hands.",
         skeleton: <SkeletonFour />,
-        className: "col-span-1 lg:col-span-3 border-b lg:border-none",
-    },
-    {
-        title: "Car Buy & Sell",
-        description:
-          "Looking to buy or sell a car? We offer a hassle-free experience with fair pricing and a wide selection of quality vehicles.",
-        skeleton: <SkeletonFive />,
         className: "col-span-1 lg:col-span-6 border-b lg:border-none",
     }
   ];
