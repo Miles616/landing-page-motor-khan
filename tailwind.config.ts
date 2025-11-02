@@ -14,6 +14,13 @@ export default {
         headline: ['Inter', 'sans-serif'],
         code: ['monospace'],
       },
+      fontWeight: {
+        thin: '400',
+        black: '900',
+      },
+      fontStyle: {
+        italic: 'italic',
+      },
       colors: {
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

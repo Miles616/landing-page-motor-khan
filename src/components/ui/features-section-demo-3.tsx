@@ -44,11 +44,11 @@ export default function FeaturesSectionDemo() {
   return (
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
       <div className="px-8">
-        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium text-black dark:text-white">
+        <h4 className="text-3xl lg:text-5xl lg:leading-tight max-w-5xl mx-auto text-center tracking-tight font-black italic text-black dark:text-white">
           Why Choose Motor Khan?
         </h4>
 
-        <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-normal dark:text-neutral-300">
+        <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-thin dark:text-neutral-300">
           We combine decades of experience with modern technology to provide the best car denting and painting services in Delhi.
         </p>
       </div>
@@ -84,7 +84,7 @@ const FeatureCard = ({
 
 const FeatureTitle = ({ children }: { children?: React.ReactNode }) => {
   return (
-    <p className=" max-w-5xl mx-auto text-left tracking-tight text-black dark:text-white text-xl md:text-2xl md:leading-snug">
+    <p className=" max-w-5xl mx-auto text-left tracking-tight text-black dark:text-white text-xl md:text-2xl md:leading-snug font-black italic">
       {children}
     </p>
   );
@@ -95,7 +95,7 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
     <p
       className={cn(
         "text-sm md:text-base  max-w-4xl text-left mx-auto",
-        "text-neutral-500 text-center font-normal dark:text-neutral-300",
+        "text-neutral-500 text-center font-thin dark:text-neutral-300",
         "text-left max-w-sm mx-0 md:text-sm my-2"
       )}
     >
@@ -175,9 +175,10 @@ export const SkeletonTwo = () => {
   const [rotations, setRotations] = useState<number[]>([]);
 
   useEffect(() => {
+    // This effect runs only on the client, after hydration
     const newRotations = images.map(() => Math.random() * 20 - 10);
     setRotations(newRotations);
-  }, []);
+  }, []); // Empty dependency array ensures this runs once on mount
 
 
   return (

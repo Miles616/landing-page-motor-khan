@@ -28,7 +28,7 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col min-h-screen bg-background font-body">
+    <div className="flex flex-col min-h-screen bg-background font-body font-thin">
       <main className="flex-1">
         
         <HeroSectionOne />
@@ -39,7 +39,7 @@ export default function Home() {
         {/* Customer Reviews Section */}
         <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 font-headline">
+            <h2 className="text-3xl font-black italic tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 font-headline">
               What Our Customers Say
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -47,7 +47,7 @@ export default function Home() {
                 <Card key={index} className="flex flex-col shadow-lg">
                   <CardHeader>
                     <div className="flex justify-between items-start">
-                      <CardTitle>{review.name}</CardTitle>
+                      <CardTitle className="font-black italic">{review.name}</CardTitle>
                       <div className="flex items-center gap-0.5">
                         {Array.from({ length: review.rating }).map((_, i) => (
                           <Star key={i} className="w-5 h-5 fill-primary text-primary" />
@@ -56,7 +56,7 @@ export default function Home() {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground">"{review.text}"</p>
+                    <p className="text-muted-foreground font-thin">"{review.text}"</p>
                   </CardContent>
                 </Card>
               ))}
@@ -65,13 +65,13 @@ export default function Home() {
         </section>
 
         {/* Contact Info Section */}
-        <section className="w-full py-12 md:py-24 bg-background">
+        <section className="w-full py-12 md:py-24 bg-black">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
-              <h2 className="text-3xl font-bold tracking-tighter md:text-4xl/tight font-headline">
+              <h2 className="text-3xl font-black italic tracking-tighter md:text-4xl/tight font-headline">
                 Get Your Free Quote Today
               </h2>
-              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+              <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-thin">
                 Visit us or get in touch for a no-obligation estimate for your car.
               </p>
             </div>
@@ -86,7 +86,7 @@ export default function Home() {
             <div className="mt-8 space-y-4 max-w-2xl mx-auto">
               <div className="flex items-center justify-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" />
-                <p className="font-medium">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
+                <p className="font-medium font-thin">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
               </div>
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <iframe 
