@@ -259,7 +259,7 @@ export const SkeletonFive = () => {
         <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
           <div className="flex flex-1 w-full h-full flex-col space-y-2">
             <Image
-              src="https://images.unsplash.com/photo-1554224154-260325c0591a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYXIlMjBzaG93cm9vbXxlbnwwfHx8fDE3NjIwMjYzMTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              src="https://delhi.motorkhan.com/images/about/motor-khan-rithala-rohini-delhi-audi.jpg"
               alt="Car showroom with new cars"
               width={800}
               height={800}
@@ -322,5 +322,7 @@ export const Globe = ({ className }: { className?: string }) => {
     />
   );
 };
+
+    
 
     
