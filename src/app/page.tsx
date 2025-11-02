@@ -80,7 +80,7 @@ export default function Home() {
                 Visit us or get in touch for a no-obligation estimate for your car.
               </p>
             </div>
-            <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
+            <div className="flex flex-col items-center gap-4 min-[400px]:flex-row justify-center">
               <HoverBorderGradient
                 as="a"
                 href="tel:+919871358670"
