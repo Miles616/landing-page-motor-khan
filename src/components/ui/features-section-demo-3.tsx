@@ -130,7 +130,7 @@ export const SkeletonOne = () => {
     return (
         <div className="relative flex py-8 px-2 gap-10 h-full items-center justify-center">
         <Carousel
-          className="w-full max-w-xs"
+          className="w-full max-w-xs group"
           opts={{ loop: true }}
           plugins={[
             Autoplay({
@@ -141,7 +141,7 @@ export const SkeletonOne = () => {
         >
           <CarouselContent>
             {images.map((src, index) => (
-              <CarouselItem key={index} className="group">
+              <CarouselItem key={index}>
                 <div className="p-1">
                   <div className="p-1 bg-white dark:bg-neutral-800 dark:border-neutral-700 border border-neutral-100 rounded-xl overflow-hidden">
                     <div className="relative aspect-square w-full h-full overflow-hidden rounded-lg">
@@ -149,7 +149,7 @@ export const SkeletonOne = () => {
                         src={src}
                         alt="Car service image"
                         fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className="object-cover transition-transform duration-300 scale-110 group-hover:scale-125"
                       />
                     </div>
                   </div>
@@ -353,4 +353,5 @@ export const Globe = ({ className }: { className?: string }) => {
     
 
     
+
 
