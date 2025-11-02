@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Phone } from "lucide-react";
 import { IconBrandWhatsapp } from "@tabler/icons-react";
+import { HoverBorderGradient } from "./hover-border-gradient";
 
 export default function HeroSectionOne() {
   return (
@@ -82,13 +83,16 @@ export default function HeroSectionOne() {
           >
             <Phone className="h-4 w-4" /> Call Now
           </a>
-          <a
-            href="https://wa.me/918595853918"
-            target="_blank"
-            className="w-60 transform rounded-lg border border-border bg-background px-6 py-2 font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-accent-foreground flex items-center justify-center gap-2"
-          >
-            <IconBrandWhatsapp className="h-4 w-4" /> WhatsApp
-          </a>
+           <HoverBorderGradient
+              containerClassName="rounded-full"
+              as="a"
+              href="https://wa.me/918595853918"
+              target="_blank"
+              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+            >
+              <IconBrandWhatsapp />
+              <span>WhatsApp</span>
+            </HoverBorderGradient>
         </motion.div>
         <motion.div
           initial={{

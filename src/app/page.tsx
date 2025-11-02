@@ -8,6 +8,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
 import { IconBrandWhatsapp } from '@tabler/icons-react';
+import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 
 
 export default function Home() {
@@ -83,9 +84,16 @@ export default function Home() {
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
                 <a href="tel:+919871358670"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
               </Button>
-              <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
-                <a href="https://wa.me/918595853918" target="_blank"><IconBrandWhatsapp className="mr-2 h-4 w-4" /> WhatsApp</a>
-              </Button>
+               <HoverBorderGradient
+                as="a"
+                href="https://wa.me/918595853918"
+                target="_blank"
+                containerClassName="rounded-full"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+               >
+                <IconBrandWhatsapp className="mr-2 h-4 w-4" />
+                <span>WhatsApp</span>
+              </HoverBorderGradient>
             </div>
             <div className="mt-8 space-y-4 max-w-2xl mx-auto">
               <div className="flex items-center justify-center gap-2">
