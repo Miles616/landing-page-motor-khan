@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, MapPin, Star, Mail } from 'lucide-react';
+import { Phone, MapPin, Star, Mail, ExternalLink } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
@@ -148,13 +148,14 @@ export default function Home() {
                     <a href="mailto:info@motorkhan.com" className="hover:text-primary">info@motorkhan.com</a>
                 </div>
             </div>
-            <p className="text-sm">
-              © {new Date().getFullYear()}{" "}
-              <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
-                Motor Khan
-              </a>
-              . All Rights Reserved.
-            </p>
+            <div className="flex flex-col items-center md:items-end gap-2 text-sm">
+                <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-primary">
+                    Main Website <ExternalLink className="h-4 w-4" />
+                </a>
+                <p>
+                  © {new Date().getFullYear()} Motor Khan. All Rights Reserved.
+                </p>
+            </div>
         </div>
       </footer>
     </div>
