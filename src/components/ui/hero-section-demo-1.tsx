@@ -35,7 +35,11 @@ export default function HeroSectionOne() {
                 }}
                 className="mr-2 inline-block"
               >
-                {word}
+                {word.replace(",", "") === "Denting" || word === "Painting" ? (
+                  <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">{word}</a>
+                ) : (
+                  word
+                )}
               </motion.span>
             ))}
         </h1>
@@ -52,7 +56,7 @@ export default function HeroSectionOne() {
           }}
           className="relative z-10 mx-auto max-w-xl py-4 text-center text-lg font-thin text-muted-foreground"
         >
-          Get same-day denting, painting & restoration from Motor Khan – trusted
+          Get same-day <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">denting</a>, <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">painting</a> & restoration from Motor Khan – trusted
           since 1995.
         </motion.p>
         <motion.div

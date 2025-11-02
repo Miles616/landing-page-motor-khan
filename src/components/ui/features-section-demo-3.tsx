@@ -65,7 +65,7 @@ export default function FeaturesSectionDemo() {
         </h4>
 
         <p className="text-sm lg:text-base  max-w-2xl  my-4 mx-auto text-neutral-500 text-center font-thin dark:text-neutral-300">
-          We combine decades of experience with modern technology to provide the best car denting and painting services in Delhi.
+          We combine decades of experience with modern technology to provide the best car <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">denting</a> and <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">painting</a> services in Delhi.
         </p>
       </div>
 
@@ -73,7 +73,15 @@ export default function FeaturesSectionDemo() {
         <div className="grid grid-cols-1 lg:grid-cols-6 mt-12 xl:border rounded-md dark:border-neutral-800">
           {features.map((feature) => (
             <FeatureCard key={feature.title} className={feature.className}>
-              <FeatureTitle>{feature.title}</FeatureTitle>
+              <FeatureTitle>
+                {feature.title.includes("Denting") ? (
+                  <>
+                    Expert <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Denting</a> & <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:underline">Painting</a>
+                  </>
+                ) : (
+                  feature.title
+                )}
+              </FeatureTitle>
               <FeatureDescription>{feature.description}</FeatureDescription>
               <div className=" h-full w-full">{feature.skeleton}</div>
             </FeatureCard>
@@ -353,6 +361,7 @@ export const Globe = ({ className }: { className?: string }) => {
     
 
     
+
 
 
 
