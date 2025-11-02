@@ -89,7 +89,7 @@ export default function Home() {
             </div>
             <div className="mt-8 space-y-4 max-w-2xl mx-auto">
               <div className="flex items-center justify-center gap-2">
-                <MapPin className="h-5 w-5 text-primary" />
+                <MapPin className="h-5 w-5 text-primary shrink-0" />
                 <p className="font-medium font-thin">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
               </div>
               <div className="rounded-xl overflow-hidden shadow-2xl">
