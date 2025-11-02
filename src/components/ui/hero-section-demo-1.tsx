@@ -13,7 +13,7 @@ export default function HeroSectionOne() {
           alt="Motor Khan Logo"
           width={80}
           height={80}
-          className="size-20"
+          className="size-20 object-contain"
         />
       </div>
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
