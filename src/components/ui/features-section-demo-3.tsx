@@ -111,8 +111,8 @@ export const SkeletonOne = () => {
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <Image
-            src="https://picsum.photos/seed/1/800/800"
-            alt="header"
+            src="/car-painting.png"
+            alt="Car painting and denting"
             width={800}
             height={800}
             className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
