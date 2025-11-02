@@ -54,7 +54,7 @@ export default function Home() {
                       <CardTitle className="font-black italic">{review.name}</CardTitle>
                       <div className="flex items-center gap-0.5">
                         {Array.from({ length: review.rating }).map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-primary text-primary" />
+                          <Star key={i} className="w-5 h-5 fill-yellow-500 text-yellow-500" />
                         ))}
                       </div>
                     </div>
