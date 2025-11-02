@@ -138,7 +138,7 @@ export const SkeletonThree = () => {
           {/* TODO */}
           <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
           <Image
-            src="https://delhi.motorkhan.com/images/motor-khan-rithala-rohini-delhi-white.png"
+            src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-white.png"
             alt="Motor Khan Logo White"
             width={800}
             height={800}
@@ -152,11 +152,13 @@ export const SkeletonThree = () => {
 
 export const SkeletonTwo = () => {
   const images = [
-    "https://images.unsplash.com/photo-1593941707882-65c68453989e?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1551522435-a131bf53f194?q=80&w=3425&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1525609004556-c46c7d6cf023?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    "https://images.unsplash.com/photo-1503726436345-a8a7feb58b33?q=80&w=2581&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    "https://delhi.motorkhan.com/images/car-painting.png",
+    "https://delhi.motorkhan.com/images/landing-page/car-detailing.png",
+    "https://delhi.motorkhan.com/images/landing-page/car-finishing.png",
+    "https://delhi.motorkhan.com/images/landing-page/car-painting.png",
+    "https://delhi.motorkhan.com/images/landing-page/car-repair.png",
+    "https://delhi.motorkhan.com/images/landing-page/engine-repair.png",
+    "https://delhi.motorkhan.com/images/landing-page/car-window-repair.png"
   ];
 
   const imageVariants = {
@@ -185,7 +187,7 @@ export const SkeletonTwo = () => {
     <div className="relative flex flex-col items-start p-8 gap-10 h-full overflow-hidden">
       {/* TODO */}
       <div className="flex flex-row -ml-20">
-        {images.map((image, idx) => (
+        {images.slice(0, 4).map((image, idx) => (
           <motion.div
             variants={imageVariants}
             key={"images-first" + idx}
@@ -207,11 +209,11 @@ export const SkeletonTwo = () => {
         ))}
       </div>
       <div className="flex flex-row">
-        {images.map((image, idx) => (
+        {images.slice(4).map((image, idx) => (
           <motion.div
             key={"images-second" + idx}
             style={{
-                rotate: rotations[idx + Math.floor(images.length / 2)] || 0,
+                rotate: rotations[idx + 4] || 0,
             }}
             variants={imageVariants}
             whileHover="whileHover"
