@@ -6,7 +6,15 @@ import Image from "next/image";
 export default function HeroSectionOne() {
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
-      <Navbar />
+      <div className="flex justify-center py-4">
+        <Image
+          src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png"
+          alt="Motor Khan Logo"
+          width={80}
+          height={80}
+          className="size-20"
+        />
+      </div>
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
       </div>
@@ -109,22 +117,3 @@ export default function HeroSectionOne() {
     </div>
   );
 }
-
-const Navbar = () => {
-  return (
-    <nav className="flex w-full items-center justify-between border-t border-b border-border px-4 py-4">
-      <div className="flex items-center gap-2">
-        <Image
-          src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png"
-          alt="Motor Khan Logo"
-          width={40}
-          height={40}
-          className="size-10"
-        />
-        <h1 className="text-base font-bold md:text-2xl text-foreground">
-          Motor Khan
-        </h1>
-      </div>
-    </nav>
-  );
-};
