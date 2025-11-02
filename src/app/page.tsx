@@ -148,7 +148,13 @@ export default function Home() {
                     <a href="mailto:info@motorkhan.com" className="hover:text-primary">info@motorkhan.com</a>
                 </div>
             </div>
-            <p className="text-sm">© {new Date().getFullYear()} Motor Khan. All Rights Reserved.</p>
+            <p className="text-sm">
+              © {new Date().getFullYear()}{" "}
+              <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="hover:text-primary">
+                Motor Khan
+              </a>
+              . All Rights Reserved.
+            </p>
         </div>
       </footer>
     </div>
