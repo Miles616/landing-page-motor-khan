@@ -1,3 +1,16 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "workshop-photo",
+      "description": "Motor Khan workshop with cars being repaired",
+      "imageUrl": "https://images.unsplash.com/photo-1586335963805-7b603f62a048?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYXIlMjB3b3Jrc2hvcHxlbnwwfHx8fDE3NjIwMjYzMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car workshop"
+    },
+    {
+      "id": "map-location",
+      "description": "Map showing the location of Motor Khan in Rohini, Delhi",
+      "imageUrl": "https://images.unsplash.com/photo-1687294782370-5ae92f081c47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZWxoaSUyMG1hcHxlbnwwfHx8fDE3NjIwNzU5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "delhi map"
+    }
+  ]
 }
