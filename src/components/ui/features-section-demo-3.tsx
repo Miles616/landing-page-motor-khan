@@ -7,6 +7,13 @@ import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { IconBrandYoutubeFilled } from "@tabler/icons-react";
 import Image from "next/image";
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+    CarouselNext,
+    CarouselPrevious,
+  } from "@/components/ui/carousel";
 
 
 export default function FeaturesSectionDemo() {
@@ -113,33 +120,37 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 };
 
 export const SkeletonOne = () => {
-  const images = [
-    "https://delhi.motorkhan.com/images/landing-page/car-paint.png",
-    "https://delhi.motorkhan.com/images/landing-page/car-wheel.png",
-    "https://delhi.motorkhan.com/images/landing-page/clutch-repair.png",
-    "https://delhi.motorkhan.com/images/landing-page/bumper-repair.png",
-  ];
-  return (
-    <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
-        <div className="grid grid-cols-2 gap-4">
-          {images.map((src, i) => (
-            <Image
-              key={i}
-              src={src}
-              alt="Car service image"
-              width={500}
-              height={500}
-              className="h-full w-full aspect-square object-cover object-center rounded-sm"
-            />
-          ))}
-        </div>
+    const images = [
+      "https://delhi.motorkhan.com/images/landing-page/car-paint.png",
+      "https://delhi.motorkhan.com/images/landing-page/car-wheel.png",
+      "https://delhi.motorkhan.com/images/landing-page/clutch-repair.png",
+      "https://delhi.motorkhan.com/images/landing-page/bumper-repair.png",
+    ];
+    return (
+      <div className="relative flex py-8 px-2 gap-10 h-full items-center justify-center">
+        <Carousel className="w-full max-w-xs" opts={{loop: true}}>
+          <CarouselContent>
+            {images.map((src, index) => (
+              <CarouselItem key={index}>
+                <div className="p-1">
+                    <div className="relative aspect-square w-full h-full overflow-hidden rounded-md">
+                      <Image
+                        src={src}
+                        alt="Car service image"
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                </div>
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+          <CarouselPrevious />
+          <CarouselNext />
+        </Carousel>
       </div>
-      <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
-      <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
-    </div>
-  );
-};
+    );
+  };
 
 export const SkeletonThree = () => {
   return (
