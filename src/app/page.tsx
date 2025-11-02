@@ -122,13 +122,15 @@ export default function Home() {
                 <p className="font-medium">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
               </div>
               <div className="rounded-xl overflow-hidden shadow-2xl">
-                <iframe
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111971.50894224923!2d77.01392298339492!3d28.716268794936916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0741eb2800b3%3A0x45640f1a595f4ff7!2sKhan%20Motors!5e0!3m2!1sen!2sin!4v1762077217305!5m2!1sen!2sin" 
+                  width="600" 
+                  height="450" 
+                  style={{border:0}} 
+                  allowFullScreen={true} 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
                   className="w-full h-[450px]"
-                  frameBorder="0"
-                  scrolling="no"
-                  marginHeight={0}
-                  marginWidth={0}
-                  src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Shop No 12, near Rice Mill, Vijay vihar Phase I, Phase 1, Block B, Rithala, Rohini, New Delhi, Delhi, 110085&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
                 ></iframe>
               </div>
             </div>
