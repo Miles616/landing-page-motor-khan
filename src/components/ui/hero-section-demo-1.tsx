@@ -10,15 +10,6 @@ import { HoverBorderGradient } from "./hover-border-gradient";
 export default function HeroSectionOne() {
   return (
     <div className="relative mx-auto my-10 flex max-w-7xl flex-col items-center justify-center">
-      <div className="flex justify-center py-4">
-        <Image
-          src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png"
-          alt="Motor Khan Logo"
-          width={80}
-          height={80}
-          className="size-20 object-contain"
-        />
-      </div>
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
       </div>

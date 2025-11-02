@@ -36,6 +36,16 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background font-body font-thin">
       <main className="flex-1">
         
+        <div className="flex justify-center py-4">
+            <Image
+            src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png"
+            alt="Motor Khan Logo"
+            width={80}
+            height={80}
+            className="size-20 object-contain"
+            />
+        </div>
+
         <HeroSectionOne />
 
         {/* Why Choose Us Section */}
