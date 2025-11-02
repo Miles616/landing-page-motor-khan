@@ -7,7 +7,6 @@ import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 
 export default function Home() {
   const workshopImage = PlaceHolderImages.find(p => p.id === 'workshop-photo');
-  const mapImage = PlaceHolderImages.find(p => p.id === 'map-location');
 
   const reviews = [
     {
@@ -120,20 +119,18 @@ export default function Home() {
             <div className="mt-8 space-y-4 max-w-2xl mx-auto">
               <div className="flex items-center justify-center gap-2">
                 <MapPin className="h-5 w-5 text-primary" />
-                <p className="font-medium">Shop No. 123, Rithala Road, Rohini Sector 5, Delhi - 110085</p>
+                <p className="font-medium">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
               </div>
-              {mapImage && (
-                <a href="https://www.google.com/maps/search/?api=1&query=Rithala+Rohini+Delhi" target="_blank" rel="noopener noreferrer" className="block rounded-xl overflow-hidden shadow-2xl">
-                  <Image
-                    src={mapImage.imageUrl}
-                    alt={mapImage.description}
-                    width={800}
-                    height={450}
-                    className="aspect-video object-cover cursor-pointer hover:scale-105 transition-transform duration-300"
-                    data-ai-hint={mapImage.imageHint}
-                  />
-                </a>
-              )}
+              <div className="rounded-xl overflow-hidden shadow-2xl">
+                <iframe
+                  className="w-full h-[450px]"
+                  frameBorder="0"
+                  scrolling="no"
+                  marginHeight={0}
+                  marginWidth={0}
+                  src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=Shop No 12, near Rice Mill, Vijay vihar Phase I, Phase 1, Block B, Rithala, Rohini, New Delhi, Delhi, 110085&amp;t=h&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+                ></iframe>
+              </div>
             </div>
           </div>
         </section>
