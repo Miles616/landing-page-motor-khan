@@ -11,6 +11,12 @@
       "description": "Map showing the location of Motor Khan in Rohini, Delhi",
       "imageUrl": "https://images.unsplash.com/photo-1687294782370-5ae92f081c47?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxkZWxoaSUyMG1hcHxlbnwwfHx8fDE3NjIwNzU5NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
       "imageHint": "delhi map"
+    },
+    {
+      "id": "car-buy-sell",
+      "description": "A showroom with cars for sale",
+      "imageUrl": "https://images.unsplash.com/photo-1554224154-260325c0591a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYXIlMjBzaG93cm9vbXxlbnwwfHx8fDE3NjIwMjYzMTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "car showroom"
     }
   ]
 }

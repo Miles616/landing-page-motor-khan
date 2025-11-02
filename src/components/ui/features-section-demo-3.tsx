@@ -35,12 +35,19 @@ export default function FeaturesSectionDemo() {
         "col-span-1 lg:col-span-3 lg:border-r  dark:border-neutral-800",
     },
     {
-      title: "Trusted Since 1995",
-      description:
-        "With decades of experience serving Delhi, we have built a reputation for reliable service and customer satisfaction. Your car is in safe hands.",
-      skeleton: <SkeletonFour />,
-      className: "col-span-1 lg:col-span-3 border-b lg:border-none",
+        title: "Trusted Since 1995",
+        description:
+          "With decades of experience serving Delhi, we have built a reputation for reliable service and customer satisfaction. Your car is in safe hands.",
+        skeleton: <SkeletonFour />,
+        className: "col-span-1 lg:col-span-3 border-b lg:border-none",
     },
+    {
+        title: "Car Buy & Sell",
+        description:
+          "Looking to buy or sell a car? We offer a hassle-free experience with fair pricing and a wide selection of quality vehicles.",
+        skeleton: <SkeletonFive />,
+        className: "col-span-1 lg:col-span-6 border-b lg:border-none",
+    }
   ];
   return (
     <div className="relative z-20 py-10 lg:py-40 max-w-7xl mx-auto">
@@ -246,6 +253,28 @@ export const SkeletonFour = () => {
   );
 };
 
+export const SkeletonFive = () => {
+    return (
+      <div className="relative flex py-8 px-2 gap-10 h-full">
+        <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
+          <div className="flex flex-1 w-full h-full flex-col space-y-2">
+            <Image
+              src="https://images.unsplash.com/photo-1554224154-260325c0591a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw0fHxjYXIlMjBzaG93cm9vbXxlbnwwfHx8fDE3NjIwMjYzMTd8MA&ixlib=rb-4.1.0&q=80&w=1080"
+              alt="Car showroom with new cars"
+              width={800}
+              height={800}
+              data-ai-hint="car showroom"
+              className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
+            />
+          </div>
+        </div>
+        <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
+        <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
+      </div>
+    );
+};
+  
+
 export const Globe = ({ className }: { className?: string }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
@@ -293,3 +322,5 @@ export const Globe = ({ className }: { className?: string }) => {
     />
   );
 };
+
+    
