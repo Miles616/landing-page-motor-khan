@@ -1,3 +1,4 @@
+
 "use client";
 import React from "react";
 import { cn } from "@/lib/utils";
@@ -111,7 +112,7 @@ export const SkeletonOne = () => {
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <Image
-            src="/car-painting.png"
+            src="/car-repair image.png"
             alt="Car painting and denting"
             width={800}
             height={800}
@@ -292,3 +293,5 @@ export const Globe = ({ className }: { className?: string }) => {
     />
   );
 };
+
+    
