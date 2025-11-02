@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, MessageSquare, Calendar, Award, Wrench, CircleDollarSign, MapPin, Star } from 'lucide-react';
+import { Phone, MessageSquare, MapPin, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 
@@ -48,9 +48,6 @@ export default function Home() {
                 </Button>
                 <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
                   <a href="https://wa.me/919876543210" target="_blank"><MessageSquare className="mr-2 h-4 w-4" /> WhatsApp</a>
-                </Button>
-                <Button asChild size="lg" variant="secondary">
-                  <a href="tel:+919876543210"><Calendar className="mr-2 h-4 w-4" /> Book Appointment</a>
                 </Button>
               </div>
               {workshopImage && (
@@ -144,4 +141,3 @@ export default function Home() {
     </div>
   );
 }
-    
