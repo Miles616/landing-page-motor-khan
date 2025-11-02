@@ -149,7 +149,7 @@ export const SkeletonOne = () => {
                         src={src}
                         alt="Car service image"
                         fill
-                        className="object-cover transition-transform duration-300 scale-110 group-hover:scale-125"
+                        className="object-cover transition-transform duration-300 scale-125 group-hover:scale-150"
                       />
                     </div>
                   </div>
@@ -353,5 +353,6 @@ export const Globe = ({ className }: { className?: string }) => {
     
 
     
+
 
 
