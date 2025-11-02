@@ -4,6 +4,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, MessageSquare, MapPin, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
+import HeroSectionOne from '@/components/ui/hero-section-demo-1';
 
 export default function Home() {
   const workshopImage = PlaceHolderImages.find(p => p.id === 'workshop-photo');
@@ -29,42 +30,8 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background font-body">
       <main className="flex-1">
-        {/* Hero Section */}
-        <section className="w-full py-12 md:py-24 lg:py-32">
-          <div className="container px-4 md:px-6">
-            <div className="grid gap-6 lg:gap-12 items-center justify-center">
-              <div className="text-center space-y-4">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none font-headline text-foreground">
-                  Car Denting & Painting Experts in Rohini, Delhi
-                </h1>
-                <p className="max-w-[700px] mx-auto text-muted-foreground md:text-xl">
-                  Get same-day denting, painting & restoration from Motor Khan – trusted since 1995.
-                </p>
-              </div>
-              <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-                <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                  <a href="tel:+919876543210"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
-                </Button>
-                <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
-                  <a href="https://wa.me/919876543210" target="_blank"><MessageSquare className="mr-2 h-4 w-4" /> WhatsApp</a>
-                </Button>
-              </div>
-              {workshopImage && (
-                <div className="w-full max-w-4xl mx-auto pt-8">
-                  <Image
-                    src={workshopImage.imageUrl}
-                    alt={workshopImage.description}
-                    width={1200}
-                    height={800}
-                    className="mx-auto aspect-video overflow-hidden rounded-xl object-cover shadow-2xl"
-                    data-ai-hint={workshopImage.imageHint}
-                    priority
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-        </section>
+        
+        <HeroSectionOne />
 
         {/* Why Choose Us Section */}
         <FeaturesSectionDemo />
