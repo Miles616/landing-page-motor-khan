@@ -77,13 +77,13 @@ export default function HeroSectionOne() {
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
           <a
-            href="tel:+919876543210"
+            href="tel:+919871358670"
             className="w-60 transform rounded-lg bg-primary px-6 py-2 font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 flex items-center justify-center gap-2"
           >
             <Phone className="h-4 w-4" /> Call Now
           </a>
           <a
-            href="https://wa.me/919876543210"
+            href="https://wa.me/918595853918"
             target="_blank"
             className="w-60 transform rounded-lg border border-border bg-background px-6 py-2 font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-accent-foreground flex items-center justify-center gap-2"
           >

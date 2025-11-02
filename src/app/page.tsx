@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, MapPin, Star } from 'lucide-react';
+import { Phone, MapPin, Star, Mail } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
@@ -81,10 +81,10 @@ export default function Home() {
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
               <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <a href="tel:+919876543210"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
+                <a href="tel:+919871358670"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
               </Button>
               <Button asChild size="lg" variant="default" className="bg-primary hover:bg-primary/90">
-                <a href="https://wa.me/919876543210" target="_blank"><IconBrandWhatsapp className="mr-2 h-4 w-4" /> WhatsApp</a>
+                <a href="https://wa.me/918595853918" target="_blank"><IconBrandWhatsapp className="mr-2 h-4 w-4" /> WhatsApp</a>
               </Button>
             </div>
             <div className="mt-8 space-y-4 max-w-2xl mx-auto">
@@ -108,6 +108,25 @@ export default function Home() {
           </div>
         </section>
       </main>
+      <footer className="bg-black text-muted-foreground py-6">
+        <div className="container flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
+            <div className="flex flex-col gap-2">
+                <div className="flex items-center justify-center md:justify-start gap-2">
+                    <Phone className="h-4 w-4" />
+                    <a href="tel:+919871358670" className="hover:text-primary">+91 9871358670</a>
+                </div>
+                <div className="flex items-center justify-center md:justify-start gap-2">
+                    <IconBrandWhatsapp className="h-4 w-4" />
+                    <a href="https://wa.me/918595853918" target="_blank" className="hover:text-primary">+91 8595853918</a>
+                </div>
+                <div className="flex items-center justify-center md:justify-start gap-2">
+                    <Mail className="h-4 w-4" />
+                    <a href="mailto:info@motorkhan.com" className="hover:text-primary">info@motorkhan.com</a>
+                </div>
+            </div>
+            <p className="text-sm">© {new Date().getFullYear()} Motor Khan. All Rights Reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 }
