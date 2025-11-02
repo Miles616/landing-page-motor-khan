@@ -112,7 +112,7 @@ export const SkeletonOne = () => {
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <Image
-            src="/linear.webp"
+            src="https://picsum.photos/seed/1/800/800"
             alt="header"
             width={800}
             height={800}
@@ -281,4 +281,3 @@ export const Globe = ({ className }: { className?: string }) => {
     />
   );
 };
-    
