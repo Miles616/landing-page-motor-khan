@@ -138,7 +138,7 @@ export const SkeletonThree = () => {
           {/* TODO */}
           <IconBrandYoutubeFilled className="h-20 w-20 absolute z-10 inset-0 text-red-500 m-auto " />
           <Image
-            src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-white.png"
+            src="https://delhi.motorkhan.com/images/motor-khan-rithala-rohini-delhi-white.png"
             alt="Motor Khan Logo White"
             width={800}
             height={800}
