@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { Phone, MessageSquare } from "lucide-react";
 
 export default function HeroSectionOne() {
   return (
@@ -75,16 +76,16 @@ export default function HeroSectionOne() {
         >
           <a
             href="tel:+919876543210"
-            className="w-60 transform rounded-lg bg-primary px-6 py-2 font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90"
+            className="w-60 transform rounded-lg bg-primary px-6 py-2 font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 flex items-center justify-center gap-2"
           >
-            Call Now
+            <Phone className="h-4 w-4" /> Call Now
           </a>
           <a
             href="https://wa.me/919876543210"
             target="_blank"
-            className="w-60 transform rounded-lg border border-border bg-background px-6 py-2 font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-accent-foreground"
+            className="w-60 transform rounded-lg border border-border bg-background px-6 py-2 font-medium text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent hover:text-accent-foreground flex items-center justify-center gap-2"
           >
-            WhatsApp
+            <MessageSquare className="h-4 w-4" /> WhatsApp
           </a>
         </motion.div>
         <motion.div
