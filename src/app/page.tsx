@@ -39,7 +39,7 @@ export default function Home() {
         {/* Customer Reviews Section */}
         <section className="w-full py-12 md:py-24">
           <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-black italic tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 font-headline">
+            <h2 className="text-3xl font-black italic tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 font-headline uppercase">
               What Our Customers Say
             </h2>
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -68,7 +68,7 @@ export default function Home() {
         <section className="w-full py-12 md:py-24 bg-black">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
-              <h2 className="text-3xl font-black italic tracking-tighter md:text-4xl/tight font-headline">
+              <h2 className="text-3xl font-black italic tracking-tighter md:text-4xl/tight font-headline uppercase">
                 Get Your Free Quote Today
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-thin">

@@ -26,7 +26,7 @@ export default function HeroSectionOne() {
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-primary to-transparent" />
       </div>
       <div className="px-4 py-10 md:py-20">
-        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-black italic md:text-4xl lg:text-7xl text-foreground">
+        <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-black italic md:text-4xl lg:text-7xl text-foreground uppercase">
           {"Car Denting & Painting Experts in Rohini"
             .split(" ")
             .map((word, index) => (
