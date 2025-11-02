@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Phone, MessageSquare, Calendar, Award, Wrench, CircleDollarSign, MapPin, Star } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 
 export default function Home() {
   const workshopImage = PlaceHolderImages.find(p => p.id === 'workshop-photo');
@@ -23,29 +24,6 @@ export default function Home() {
       name: "Amit Sharma",
       rating: 5,
       text: "Fantastic experience! The team at Motor Khan provided a quick and accurate quote. The work was completed on the same day as promised. I'm very impressed with the quality."
-    }
-  ];
-
-  const benefits = [
-    {
-      icon: <Award className="w-10 h-10 text-primary" />,
-      title: "21+ Years Experience",
-      description: "Serving Rohini with trusted expertise since 1995."
-    },
-    {
-      icon: <Wrench className="w-10 h-10 text-primary" />,
-      title: "Genuine Parts & Quality Paint",
-      description: "We use only OEM-spec parts and premium paints for a lasting finish."
-    },
-    {
-      icon: <CircleDollarSign className="w-10 h-10 text-primary" />,
-      title: "Affordable Pricing",
-      description: "Top-quality service that doesn't break the bank. Get a free quote today."
-    },
-    {
-      icon: <MapPin className="w-10 h-10 text-primary" />,
-      title: "Located in Rithala, Rohini",
-      description: "Easily accessible workshop for all your car care needs."
     }
   ];
 
@@ -93,24 +71,7 @@ export default function Home() {
         </section>
 
         {/* Why Choose Us Section */}
-        <section className="w-full py-12 md:py-24 bg-secondary">
-          <div className="container px-4 md:px-6">
-            <h2 className="text-3xl font-bold tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 font-headline">
-              Why Choose Motor Khan?
-            </h2>
-            <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-4">
-              {benefits.map((benefit, index) => (
-                <div key={index} className="flex flex-col items-center text-center gap-3">
-                  <div className="bg-background p-4 rounded-full shadow-md">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-bold">{benefit.title}</h3>
-                  <p className="text-sm text-muted-foreground">{benefit.description}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+        <FeaturesSectionDemo />
 
         {/* Customer Reviews Section */}
         <section className="w-full py-12 md:py-24">
@@ -183,3 +144,4 @@ export default function Home() {
     </div>
   );
 }
+    
