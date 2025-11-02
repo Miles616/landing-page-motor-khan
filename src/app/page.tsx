@@ -81,16 +81,22 @@ export default function Home() {
               </p>
             </div>
             <div className="flex flex-col gap-2 min-[400px]:flex-row justify-center">
-              <Button asChild size="lg" className="bg-accent text-accent-foreground hover:bg-accent/90">
-                <a href="tel:+919871358670"><Phone className="mr-2 h-4 w-4" /> Call Now</a>
-              </Button>
-               <HoverBorderGradient
+              <HoverBorderGradient
+                as="a"
+                href="tel:+919871358670"
+                containerClassName="rounded-full"
+                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+              >
+                <Phone className="mr-2 h-4 w-4" />
+                <span>Call Now</span>
+              </HoverBorderGradient>
+              <HoverBorderGradient
                 as="a"
                 href="https://wa.me/918595853918"
                 target="_blank"
                 containerClassName="rounded-full"
                 className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-               >
+              >
                 <IconBrandWhatsapp className="mr-2 h-4 w-4" />
                 <span>WhatsApp</span>
               </HoverBorderGradient>

@@ -77,22 +77,25 @@ export default function HeroSectionOne() {
           }}
           className="relative z-10 mt-8 flex flex-wrap items-center justify-center gap-4"
         >
-          <a
+          <HoverBorderGradient
+            as="a"
             href="tel:+919871358670"
-            className="w-60 transform rounded-lg bg-primary px-6 py-2 font-medium text-primary-foreground transition-all duration-300 hover:-translate-y-0.5 hover:bg-primary/90 flex items-center justify-center gap-2"
+            containerClassName="rounded-full"
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
           >
-            <Phone className="h-4 w-4" /> Call Now
-          </a>
-           <HoverBorderGradient
-              containerClassName="rounded-full"
-              as="a"
-              href="https://wa.me/918595853918"
-              target="_blank"
-              className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
-            >
-              <IconBrandWhatsapp />
-              <span>WhatsApp</span>
-            </HoverBorderGradient>
+            <Phone className="mr-2 h-4 w-4" />
+            <span>Call Now</span>
+          </HoverBorderGradient>
+          <HoverBorderGradient
+            containerClassName="rounded-full"
+            as="a"
+            href="https://wa.me/918595853918"
+            target="_blank"
+            className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+          >
+            <IconBrandWhatsapp />
+            <span>WhatsApp</span>
+          </HoverBorderGradient>
         </motion.div>
         <motion.div
           initial={{
