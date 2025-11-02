@@ -113,21 +113,28 @@ const FeatureDescription = ({ children }: { children?: React.ReactNode }) => {
 };
 
 export const SkeletonOne = () => {
+  const images = [
+    "https://delhi.motorkhan.com/images/landing-page/car-paint.png",
+    "https://delhi.motorkhan.com/images/landing-page/car-wheel.png",
+    "https://delhi.motorkhan.com/images/landing-page/clutch-repair.png",
+    "https://delhi.motorkhan.com/images/landing-page/bumper-repair.png",
+  ];
   return (
     <div className="relative flex py-8 px-2 gap-10 h-full">
-      <div className="w-full  p-5  mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
-        <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
-          {/* TODO */}
-          <Image
-            src="https://delhi.motorkhan.com/images/landing-page/car-window-repair.png"
-            alt="Car painting and denting"
-            width={800}
-            height={800}
-            className="h-full w-full aspect-square object-cover object-left-top rounded-sm"
-          />
+      <div className="w-full p-5 mx-auto bg-white dark:bg-neutral-900 shadow-2xl group h-full">
+        <div className="grid grid-cols-2 gap-4">
+          {images.map((src, i) => (
+            <Image
+              key={i}
+              src={src}
+              alt="Car service image"
+              width={500}
+              height={500}
+              className="h-full w-full aspect-square object-cover object-center rounded-sm"
+            />
+          ))}
         </div>
       </div>
-
       <div className="absolute bottom-0 z-40 inset-x-0 h-60 bg-gradient-to-t from-white dark:from-black via-white dark:via-black to-transparent w-full pointer-events-none" />
       <div className="absolute top-0 z-40 inset-x-0 h-60 bg-gradient-to-b from-white dark:from-black via-transparent to-transparent w-full pointer-events-none" />
     </div>
