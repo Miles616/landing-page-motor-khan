@@ -85,7 +85,7 @@ export default function Home() {
                 as="a"
                 href="tel:+919871358670"
                 containerClassName="rounded-full"
-                className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
+                className="bg-white text-black dark:bg-white dark:text-black flex items-center space-x-2"
               >
                 <Phone className="mr-2 h-4 w-4" />
                 <span>Call Now</span>
