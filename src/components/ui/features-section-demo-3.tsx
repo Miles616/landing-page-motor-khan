@@ -112,7 +112,7 @@ export const SkeletonOne = () => {
         <div className="flex flex-1 w-full h-full flex-col space-y-2  ">
           {/* TODO */}
           <Image
-            src="/car-repair image.png"
+            src="https://delhi.motorkhan.com/images/landing-page/car-window-repair.png"
             alt="Car painting and denting"
             width={800}
             height={800}
