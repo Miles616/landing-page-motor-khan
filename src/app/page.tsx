@@ -84,10 +84,12 @@ export default function Home() {
               </HoverBorderGradient>
             </div>
             <div className="mt-8 space-y-4 max-w-2xl mx-auto">
-              <div className="flex items-center justify-center gap-2">
-                <MapPin className="h-5 w-5 text-primary shrink-0" />
-                <p className="font-medium font-thin">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
-              </div>
+              <a href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9" target="_blank" rel="noopener noreferrer">
+                <div className="flex items-center justify-center gap-2">
+                  <MapPin className="h-5 w-5 text-primary shrink-0" />
+                  <p className="font-medium font-thin">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
+                </div>
+              </a>
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <iframe 
                   src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d111971.50894224923!2d77.01392298339492!3d28.716268794936916!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0741eb2800b3%3A0x45640f1a595f4ff7!2sKhan%20Motors!5e0!3m2!1sen!2sin!4v1762077217305!5m2!1sen!2sin" 
