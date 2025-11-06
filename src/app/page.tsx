@@ -9,31 +9,15 @@ import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
 import { IconBrandWhatsapp } from '@tabler/icons-react';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
+import Script from 'next/script';
 
 
 export default function Home() {
   const workshopImage = PlaceHolderImages.find(p => p.id === 'workshop-photo');
 
-  const reviews = [
-    {
-      name: "Ravi Kumar",
-      rating: 5,
-      text: "Motor Khan is the best! They fixed a huge dent on my car, and it looks brand new. The paint job is flawless. Highly recommended for their professionalism and affordable prices."
-    },
-    {
-      name: "Priya Singh",
-      rating: 5,
-      text: "I've been a customer since 2010. Their service is consistently excellent. They use genuine parts and the staff is very knowledgeable. Trustworthy and reliable workshop in Rohini."
-    },
-    {
-      name: "Amit Sharma",
-      rating: 5,
-      text: "Fantastic experience! The team at Motor Khan provided a quick and accurate quote. The work was completed on the same day as promised. I'm very impressed with the quality."
-    }
-  ];
-
   return (
     <div className="flex flex-col min-h-screen bg-background font-body font-thin">
+      <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
       <main className="flex-1">
         
         <div className="flex justify-center py-4">
@@ -57,25 +41,7 @@ export default function Home() {
             <h2 className="text-3xl font-black italic tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 font-headline uppercase">
               What Our Customers Say
             </h2>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              {reviews.map((review, index) => (
-                <Card key={index} className="flex flex-col shadow-lg">
-                  <CardHeader>
-                    <div className="flex justify-between items-start">
-                      <CardTitle className="font-black italic">{review.name}</CardTitle>
-                      <div className="flex items-center gap-0.5">
-                        {Array.from({ length: review.rating }).map((_, i) => (
-                          <Star key={i} className="w-5 h-5 fill-yellow-500 text-yellow-500" />
-                        ))}
-                      </div>
-                    </div>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground font-thin">"{review.text}"</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+            <div className="elfsight-app-6cf42501-5de5-412b-bbe5-f462764accaa" data-elfsight-app-lazy></div>
           </div>
         </section>
 
@@ -137,23 +103,33 @@ export default function Home() {
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-center md:justify-start gap-2">
                     <Phone className="h-4 w-4" />
-                    <a href="tel:+919871358670" className="hover:text-primary">+91 9871358670</a>
+                    <a href="tel:+919871358670">
+                      +91 9871358670
+                    </a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-2">
                     <IconBrandWhatsapp className="h-4 w-4" />
-                    <a href="https://wa.me/918595853918" target="_blank" className="hover:text-primary">+91 8595853918</a>
+                    <a href="https://wa.me/918595853918" target="_blank">
+                      +91 8595853918
+                    </a>
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-2">
                     <Mail className="h-4 w-4" />
-                    <a href="mailto:info@motorkhan.com" className="hover:text-primary">info@motorkhan.com</a>
+                    <a href="mailto:info@motorkhan.com">
+                      info@motorkhan.com
+                    </a>
                 </div>
             </div>
             <div className="flex flex-col items-center md:items-end gap-2 text-sm">
-                <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 hover:text-primary">
+                <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
                     <Globe className="h-4 w-4" /> Main Website
                 </a>
                 <p>
-                  © {new Date().getFullYear()} <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">Motor Khan</a>. All Rights Reserved.
+                  © {new Date().getFullYear()}{" "}
+                  <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">
+                    Motor Khan
+                  </a>
+                  . All Rights Reserved.
                 </p>
             </div>
         </div>
