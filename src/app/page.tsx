@@ -10,6 +10,8 @@ import HeroSectionOne from '@/components/ui/hero-section-demo-1';
 import { IconBrandWhatsapp } from '@tabler/icons-react';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import Script from 'next/script';
+import { Toaster } from '@/components/ui/toaster';
+import { ContactForm } from '@/components/ui/contact-form';
 
 
 export default function Home() {
@@ -18,6 +20,7 @@ export default function Home() {
   return (
     <div className="flex flex-col min-h-screen bg-background font-body font-thin">
       <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
+      <Toaster />
       <main className="flex-1">
         
         <div className="flex justify-center py-4">
@@ -53,8 +56,11 @@ export default function Home() {
                 Get Your Free Quote Today
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-thin">
-                Visit us or get in touch for a no-obligation estimate for your car.
+                Fill out the form below or get in touch for a no-obligation estimate for your car.
               </p>
+            </div>
+            <div className="mx-auto w-full max-w-sm space-y-4">
+                <ContactForm />
             </div>
             <div className="flex flex-col items-center gap-4 min-[400px]:flex-row justify-center">
               <HoverBorderGradient
