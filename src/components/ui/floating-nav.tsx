@@ -11,9 +11,9 @@ import { motion } from 'framer-motion';
 export function FloatingNav() {
   const pathname = usePathname();
   const navItems = [
-    { name: 'Home', link: '/', icon: <Home className="h-5 w-5" /> },
     { name: 'WhatsApp', link: 'https://wa.me/918595853918', icon: <IconBrandWhatsapp className="h-5 w-5" /> },
     { name: 'Location', link: '#contact', icon: <MapPin className="h-5 w-5" /> },
+    { name: 'Home', link: '/', icon: <Home className="h-5 w-5" /> },
     { name: 'Contact', link: '#contact', icon: <Mail className="h-5 w-5" /> },
     { name: 'Call', link: 'tel:+919871358670', icon: <Phone className="h-5 w-5" /> },
   ];
@@ -31,7 +31,7 @@ export function FloatingNav() {
       >
         <div className="flex justify-around items-center h-14 px-2 space-x-1">
           {navItems.map((item) => {
-            const isActive = (pathname === item.link || (item.link === '#contact' && pathname.includes('#contact') && (item.name === 'Contact' || item.name === 'Location')));
+            const isActive = (pathname === item.link && item.name === 'Home') || (item.link.startsWith('#') && pathname.includes(item.link));
             return (
                 <Link
                 key={item.name}
