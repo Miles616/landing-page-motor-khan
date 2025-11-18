@@ -5,6 +5,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useTransition, useState } from "react";
+import { Send } from 'lucide-react';
 
 import {
   Form,
@@ -153,7 +154,10 @@ export function ContactForm() {
                 className="bg-white text-black dark:bg-white dark:text-black flex items-center justify-center w-full"
                 disabled={isPending}
             >
-                {isPending ? "Sending..." : "Send Message"}
+                <div className="flex items-center gap-2">
+                    {isPending ? "Sending..." : "Send Message"}
+                    {!isPending && <Send className="h-4 w-4" />}
+                </div>
             </HoverBorderGradient>
           </form>
         </Form>
