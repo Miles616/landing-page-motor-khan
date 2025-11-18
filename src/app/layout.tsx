@@ -1,3 +1,4 @@
+
 import type {Metadata} from 'next';
 import './globals.css';
 
@@ -37,10 +38,16 @@ export default function RootLayout({
     "openingHours": "Mo-Su 09:00-21:00"
   };
 
+  const logoUrl = "https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png";
+
   return (
     <html lang="en" className="dark">
       <head>
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href={logoUrl} sizes="any" type="image/png" />
+        <link rel="shortcut icon" href={logoUrl} type="image/png" />
+        <link rel="apple-touch-icon" sizes="180x180" href={logoUrl} />
+        <link rel="icon" type="image/png" sizes="32x32" href={logoUrl} />
+        <link rel="icon" type="image/png" sizes="16x16" href={logoUrl} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;1,900&display=swap" rel="stylesheet" />
