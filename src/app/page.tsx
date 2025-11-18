@@ -124,8 +124,8 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-center md:justify-start gap-2">
                     <Mail className="h-4 w-4" />
-                    <a href="mailto:info@motorkhan.com">
-                      info@motorkhan.com
+                    <a href="mailto:motorkhandelhi@gmail.com">
+                      motorkhandelhi@gmail.com
                     </a>
                 </div>
             </div>
