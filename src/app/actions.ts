@@ -1,11 +1,10 @@
+
 'use server';
 
 import { z } from 'zod';
 import { Resend } from 'resend';
 import { ContactEmailTemplate } from '@/emails/contact-template';
 import { ThankYouEmailTemplate } from '@/emails/thank-you-template';
-
-const resend = new Resend(process.env.RESEND_API_KEY);
 
 const formSchema = z.object({
   name: z.string(),
@@ -21,6 +20,12 @@ export async function sendContactMessage(values: z.infer<typeof formSchema>) {
     return { success: false, error: 'Invalid fields.' };
   }
 
+  if (!process.env.RESEND_API_KEY) {
+    console.error('Resend API key is not set.');
+    return { success: false, error: 'The server is not configured to send emails.' };
+  }
+
+  const resend = new Resend(process.env.RESEND_API_KEY);
   const { name, phone, email, message } = validatedFields.data;
 
   try {
