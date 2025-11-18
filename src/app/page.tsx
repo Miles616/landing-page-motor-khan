@@ -12,6 +12,7 @@ import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import Script from 'next/script';
 import { Toaster } from '@/components/ui/toaster';
 import { ContactForm } from '@/components/ui/contact-form';
+import { FloatingNav } from '@/components/ui/floating-nav';
 
 
 export default function Home() {
@@ -21,7 +22,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-background font-body font-thin">
       <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
       <Toaster />
-      <main className="flex-1">
+      <main className="flex-1 pb-16 md:pb-0">
         
         <div className="flex justify-center py-4">
             <Image
@@ -49,7 +50,7 @@ export default function Home() {
         </section>
 
         {/* Contact Info Section */}
-        <section className="w-full py-12 md:py-24 bg-black">
+        <section id="contact" className="w-full py-12 md:py-24 bg-black">
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-3xl font-black italic tracking-tighter md:text-4xl/tight font-headline uppercase">
@@ -142,6 +143,7 @@ export default function Home() {
             </div>
         </div>
       </footer>
+      <FloatingNav />
     </div>
   );
 }
