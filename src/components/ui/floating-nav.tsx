@@ -13,7 +13,7 @@ export function FloatingNav() {
   const navItems = [
     { name: 'WhatsApp', link: 'https://wa.me/918595853918', icon: <IconBrandWhatsapp className="h-5 w-5" /> },
     { name: 'Location', link: '#contact', icon: <MapPin className="h-5 w-5" /> },
-    { name: 'Home', link: '/', icon: <Home className="h-5 w-5" /> },
+    { name: 'Home', link: '/', icon: <Home className="h-7 w-7" /> },
     { name: 'Contact', link: '#contact', icon: <Mail className="h-5 w-5" /> },
     { name: 'Call', link: 'tel:+919871358670', icon: <Phone className="h-5 w-5" /> },
   ];
@@ -27,8 +27,9 @@ export function FloatingNav() {
           duration: 0.5,
           ease: "backOut",
         }}
-        className="bg-background/80 backdrop-blur-sm border border-border shadow-lg rounded-full"
+        className="relative bg-background/80 backdrop-blur-sm border border-border shadow-lg rounded-full"
       >
+        <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-white/30 to-transparent dark:from-white/10 to-transparent rounded-t-full pointer-events-none" />
         <div className="flex justify-around items-center h-14 px-2 space-x-1">
           {navItems.map((item) => {
             const isActive = (pathname === item.link && item.name === 'Home') || (item.link.startsWith('#') && pathname.includes(item.link));
