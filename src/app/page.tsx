@@ -86,7 +86,7 @@ export default function Home() {
             </div>
             <div id="map" className="mt-8 space-y-4 max-w-2xl mx-auto">
               <a href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9" target="_blank" rel="noopener noreferrer">
-                <div className="flex items-center justify-center gap-2">
+                <div className="flex items-start justify-center gap-2">
                   <MapPin className="h-5 w-5 text-primary shrink-0" />
                   <p className="font-medium font-thin">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
                 </div>
