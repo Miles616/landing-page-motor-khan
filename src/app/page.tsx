@@ -84,7 +84,7 @@ export default function Home() {
                 <span>WhatsApp</span>
               </HoverBorderGradient>
             </div>
-            <div className="mt-8 space-y-4 max-w-2xl mx-auto">
+            <div id="map" className="mt-8 space-y-4 max-w-2xl mx-auto">
               <a href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-center justify-center gap-2">
                   <MapPin className="h-5 w-5 text-primary shrink-0" />

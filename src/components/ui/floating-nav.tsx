@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 export function FloatingNav() {
   const pathname = usePathname();
   const navItems = [
-    { name: 'Location', link: '#contact', icon: <MapPin className="h-5 w-5" /> },
+    { name: 'Location', link: '#map', icon: <MapPin className="h-5 w-5" /> },
     { name: 'WhatsApp', link: 'https://wa.me/918595853918', icon: <IconBrandWhatsapp className="h-5 w-5" /> },
     { name: 'Home', link: '/', icon: <Home className="h-7 w-7" /> },
     { name: 'Contact', link: '#contact', icon: <Mail className="h-5 w-5" /> },
