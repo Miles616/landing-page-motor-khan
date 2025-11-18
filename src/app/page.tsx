@@ -107,7 +107,7 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="bg-black text-muted-foreground py-6">
+      <footer className="bg-black text-muted-foreground py-6 pb-20 md:pb-6">
         <div className="container flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
             <div className="flex flex-col gap-2">
                 <div className="flex items-center justify-center md:justify-start gap-2">
