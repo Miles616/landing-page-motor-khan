@@ -11,7 +11,7 @@ import { motion } from 'framer-motion';
 export function FloatingNav() {
   const pathname = usePathname();
   const navItems = [
-    { name: 'Location', link: '#map', icon: <MapPin className="h-5 w-5" /> },
+    { name: 'Location', link: 'https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9', icon: <MapPin className="h-5 w-5" /> },
     { name: 'WhatsApp', link: 'https://wa.me/918595853918', icon: <IconBrandWhatsapp className="h-5 w-5" /> },
     { name: 'Home', link: '/', icon: <Home className="h-7 w-7" /> },
     { name: 'Contact', link: '#contact', icon: <Mail className="h-5 w-5" /> },
@@ -39,6 +39,7 @@ export function FloatingNav() {
                 href={item.link}
                 aria-label={item.name}
                 target={item.link.startsWith('http') || item.link.startsWith('tel') ? '_blank' : '_self'}
+                rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                 className={cn(
                     'relative flex flex-col items-center justify-center text-muted-foreground hover:text-primary transition-colors w-14 h-12 rounded-full',
                     isActive && 'text-primary'
