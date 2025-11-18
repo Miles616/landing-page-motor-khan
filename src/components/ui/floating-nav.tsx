@@ -2,7 +2,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Home, Phone, Mail } from 'lucide-react';
+import { Home, Phone, Mail, MapPin } from 'lucide-react';
 import { IconBrandWhatsapp } from '@tabler/icons-react';
 import { usePathname } from 'next/navigation';
 import { cn } from '@/lib/utils';
@@ -13,6 +13,7 @@ export function FloatingNav() {
   const navItems = [
     { name: 'Home', link: '/', icon: <Home className="h-5 w-5" /> },
     { name: 'WhatsApp', link: 'https://wa.me/918595853918', icon: <IconBrandWhatsapp className="h-5 w-5" /> },
+    { name: 'Location', link: '#contact', icon: <MapPin className="h-5 w-5" /> },
     { name: 'Contact', link: '#contact', icon: <Mail className="h-5 w-5" /> },
     { name: 'Call', link: 'tel:+919871358670', icon: <Phone className="h-5 w-5" /> },
   ];
@@ -28,16 +29,17 @@ export function FloatingNav() {
         }}
         className="bg-background/80 backdrop-blur-sm border border-border shadow-lg rounded-full"
       >
-        <div className="flex justify-around items-center h-14 px-4 space-x-2">
+        <div className="flex justify-around items-center h-14 px-2 space-x-1">
           {navItems.map((item) => {
-            const isActive = (pathname === item.link || (item.link === '#contact' && pathname.includes('#contact')));
+            const isActive = (pathname === item.link || (item.link === '#contact' && pathname.includes('#contact') && (item.name === 'Contact' || item.name === 'Location')));
             return (
                 <Link
                 key={item.name}
                 href={item.link}
+                aria-label={item.name}
                 target={item.link.startsWith('http') || item.link.startsWith('tel') ? '_blank' : '_self'}
                 className={cn(
-                    'relative flex flex-col items-center justify-center text-muted-foreground hover:text-primary transition-colors w-16 h-12 rounded-full',
+                    'relative flex flex-col items-center justify-center text-muted-foreground hover:text-primary transition-colors w-14 h-12 rounded-full',
                     isActive && 'text-primary'
                 )}
                 >
@@ -50,7 +52,6 @@ export function FloatingNav() {
                 <div className="relative z-10">
                     {item.icon}
                 </div>
-                <span className="text-xs mt-1 relative z-10">{item.name}</span>
                 </Link>
             )
           })}
