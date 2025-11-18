@@ -3,6 +3,7 @@
 import { z } from 'zod';
 import { Resend } from 'resend';
 import { ContactEmailTemplate } from '@/emails/contact-template';
+import { ThankYouEmailTemplate } from '@/emails/thank-you-template';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
@@ -23,16 +24,32 @@ export async function sendContactMessage(values: z.infer<typeof formSchema>) {
   const { name, phone, email, message } = validatedFields.data;
 
   try {
-    const data = await resend.emails.send({
+    // Send email to admin
+    const adminEmail = await resend.emails.send({
       from: 'Motor Khan <noreply@updates.motorkhan.com>',
-      to: ['info@motorkhan.com'], // The recipient
+      to: ['motorkhandelhi@gmail.com'],
       subject: `New Message from ${name} via Website`,
       react: ContactEmailTemplate({ name, phone, email, message })
     });
 
-    if (data.error) {
-        return { success: false, error: data.error.message };
+    if (adminEmail.error) {
+        return { success: false, error: adminEmail.error.message };
     }
+
+    // Send thank you email to client
+    const clientEmail = await resend.emails.send({
+        from: 'Motor Khan <noreply@updates.motorkhan.com>',
+        to: [email],
+        subject: `Thank You for Contacting Motor Khan!`,
+        react: ThankYouEmailTemplate({ name })
+    });
+
+    if (clientEmail.error) {
+        // We don't want to show an error to the user if the thank you email fails
+        // but we should log it.
+        console.error('Failed to send thank you email:', clientEmail.error.message);
+    }
+
 
     return { success: true };
   } catch (error) {
