@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, MapPin, Star, Mail, Globe } from 'lucide-react';
+import { Phone, MapPin, Star, Mail, Globe, Home as HomeIcon } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
@@ -12,17 +12,24 @@ import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
 import Script from 'next/script';
 import { Toaster } from '@/components/ui/toaster';
 import { ContactForm } from '@/components/ui/contact-form';
-import { FloatingNav } from '@/components/ui/floating-nav';
+import { FloatingDock } from '@/components/ui/floating-dock';
 
 
 export default function Home() {
   const workshopImage = PlaceHolderImages.find(p => p.id === 'workshop-photo');
+  const navItems = [
+    { title: 'Location', link: 'https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9', icon: <MapPin className="h-5 w-5" /> },
+    { title: 'WhatsApp', link: 'https://wa.me/918595853918', icon: <IconBrandWhatsapp className="h-5 w-5" /> },
+    { title: 'Home', link: '/', icon: <HomeIcon className="h-7 w-7" /> },
+    { title: 'Contact', link: '#contact', icon: <Mail className="h-5 w-5" /> },
+    { title: 'Call', link: 'tel:+919871358670', icon: <Phone className="h-5 w-5" /> },
+  ];
 
   return (
     <div className="flex flex-col min-h-screen bg-background font-body font-thin">
       <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
       <Toaster />
-      <main className="flex-1 pb-16 md:pb-0">
+      <main className="flex-1 pb-20 md:pb-0">
         
         <div className="flex justify-center py-4">
             <Image
@@ -143,7 +150,9 @@ export default function Home() {
             </div>
         </div>
       </footer>
-      <FloatingNav />
+      <div className="fixed bottom-10 left-1/2 -translate-x-1/2 z-50">
+        <FloatingDock items={navItems} />
+      </div>
     </div>
   );
 }
