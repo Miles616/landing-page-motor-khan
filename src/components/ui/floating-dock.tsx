@@ -25,7 +25,7 @@ export const FloatingDock = ({
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
-        "mx-auto flex h-16 items-end gap-4 rounded-2xl bg-black px-4 pb-3",
+        "mx-auto flex h-16 items-end gap-4 rounded-2xl border border-white/10 bg-black/30 px-4 pb-3 backdrop-blur-md",
         className
       )}
     >
@@ -99,7 +99,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-neutral-800"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-neutral-800/80"
       >
         <AnimatePresence>
           {hovered && (
@@ -107,7 +107,7 @@ function IconContainer({
               initial={{ opacity: 0, y: 10, x: "-50%" }}
               animate={{ opacity: 1, y: 0, x: "-50%" }}
               exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit rounded-md border border-neutral-900 bg-neutral-800 px-2 py-0.5 text-xs whitespace-pre text-white"
+              className="absolute -top-8 left-1/2 w-fit rounded-md border border-neutral-900 bg-neutral-800/80 px-2 py-0.5 text-xs whitespace-pre text-white backdrop-blur-md"
             >
               {title}
             </motion.div>
