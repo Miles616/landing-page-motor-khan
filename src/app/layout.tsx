@@ -56,7 +56,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <Script src="https://elfsight.com/platform/js" strategy="beforeInteractive" />
+        <script src="https://elfsightcdn.com/platform.js" async></script>
       </head>
       <body className="font-body antialiased">{children}</body>
     </html>
