@@ -20,7 +20,11 @@ export default function HeroSectionOne() {
       <div className="absolute inset-x-0 bottom-0 h-px w-full bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute mx-auto h-px w-40 bg-gradient-to-r from-transparent via-primary to-transparent" />
       </div>
-      <div className="px-4 py-10 md:py-20">
+      <div className="relative px-4 py-10 md:py-20">
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="rgba(120, 50, 50, 0.4)"
+        />
         <h1 className="relative z-10 mx-auto max-w-4xl text-center text-2xl font-black italic md:text-4xl lg:text-7xl text-foreground uppercase">
           {"Car Denting, Painting, Repair & Servicing Experts in Rohini"
             .split(" ")
@@ -93,11 +97,6 @@ export default function HeroSectionOne() {
             <span>WhatsApp</span>
           </HoverBorderGradient>
         </motion.div>
-
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="rgba(120, 50, 50, 0.4)"
-        />
 
         <motion.div
           initial={{
