@@ -45,7 +45,7 @@ export const Spotlight = ({
           className
         )}
         style={{
-          backgroundImage: `radial-gradient(ellipse 80% 50% at 50% 120%, ${fill}, transparent 80%)`,
+          backgroundImage: `radial-gradient(ellipse 100% 80% at 50% 120%, ${fill}, transparent 80%)`,
         }}
       />
     );
