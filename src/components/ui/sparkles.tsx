@@ -1,5 +1,5 @@
 "use client";
-import React, { useId } from "react";
+import React, { useId, useMemo } from "react";
 import { useEffect, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, ISourceOptions, SingleOrMultiple } from "@tsparticles/engine";
@@ -340,7 +340,7 @@ export const SparklesCore = (props: ParticlesProps) => {
           },
           wobble: {
             distance: 5,
-_enable: false,
+            _enable: false,
             speed: {
               angle: 50,
               move: 10,
@@ -418,7 +418,8 @@ _enable: false,
           },
         },
         detectRetina: true,
-      }), []
+      }),
+    [background, minSize, maxSize, speed, particleColor, particleDensity]
   );
 
   const generatedId = useId();
