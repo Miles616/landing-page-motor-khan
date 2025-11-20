@@ -118,15 +118,15 @@ export default function Home() {
 
       <footer className="bg-black text-muted-foreground py-6 pb-20 md:pb-6">
         <div className="container flex flex-col items-center justify-center text-center gap-12">
-            <Spotlight>
-              <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">
+              <Spotlight>
                 <h2 className="text-4xl md:text-8xl font-black tracking-tighter text-neutral-800 transition-colors duration-200">
                   {'Motor Khan'.split('').map((char, index) => (
                     <span key={index}>{char}</span>
                   ))}
                 </h2>
-              </a>
-            </Spotlight>
+              </Spotlight>
+            </a>
 
             <div className="w-full flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
               <div className="flex flex-col gap-2">
@@ -166,4 +166,5 @@ export default function Home() {
       </div>
     </div>
   );
-}
+
+    
