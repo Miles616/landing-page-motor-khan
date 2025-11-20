@@ -14,6 +14,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { ContactForm } from '@/components/ui/contact-form';
 import { FloatingDock } from '@/components/ui/floating-dock';
 import { Spotlight } from '@/components/ui/spotlight';
+import Footer from '@/components/ui/footer';
 
 
 export default function Home() {
@@ -116,50 +117,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="bg-black text-muted-foreground py-6 pb-20 md:pb-6">
-        <div className="container flex flex-col items-center justify-center text-center gap-12">
-            <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">
-              <Spotlight>
-                <h2 className="text-4xl md:text-8xl font-black tracking-tighter text-neutral-800 transition-colors duration-200">
-                  {'Motor Khan'.split('').map((char, index) => (
-                    <span key={index}>{char}</span>
-                  ))}
-                </h2>
-              </Spotlight>
-            </a>
-
-            <div className="w-full flex flex-col md:flex-row justify-between items-center text-center md:text-left gap-4">
-              <div className="flex flex-col gap-2">
-                  <div className="flex items-center justify-center md:justify-start gap-2">
-                      <Phone className="h-4 w-4" />
-                      <a href="tel:+919871358670">
-                        +91 9871358670
-                      </a>
-                  </div>
-                  <div className="flex items-center justify-center md:justify-start gap-2">
-                      <IconBrandWhatsapp className="h-4 w-4" />
-                      <a href="https://wa.me/918595853918" target="_blank">
-                        +91 8595853918
-                      </a>
-                  </div>
-                  <div className="flex items-center justify-center md:justify-start gap-2">
-                      <Mail className="h-4 w-4" />
-                      <a href="mailto:motorkhandelhi@gmail.com">
-                        motorkhandelhi@gmail.com
-                      </a>
-                  </div>
-              </div>
-              <div className="flex flex-col items-center md:items-end gap-2 text-sm">
-                  <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
-                      <Globe className="h-4 w-4" /> Main Website
-                  </a>
-                  <div className="inline">
-                    © {new Date().getFullYear()} Motor Khan. All Rights Reserved.
-                  </div>
-              </div>
-            </div>
-        </div>
-      </footer>
+      <Footer />
 
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
         <FloatingDock items={navItems} />
