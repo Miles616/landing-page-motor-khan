@@ -1,4 +1,3 @@
-
 'use client';
 
 import Link from "next/link";
@@ -46,20 +45,16 @@ export default function Footer() {
                 <FooterHeader>Contact Us</FooterHeader>
                 <div className="flex flex-col space-y-3">
                     <p className="text-sm text-muted-foreground">Shop No. 12, Near Rice Mill, Vijay Vihar Phase I, Block B, Rithala, Rohini, Delhi 110085, India</p>
-                    <FooterLink href="tel:+918595853918">+91 8595853918</FooterLink>
-                    <FooterLink href="tel:+919871358670">+91 9871358670</FooterLink>
-                    <FooterLink href="mailto:motorkhandelhi@gmail.com">motorkhandelhi@gmail.com</FooterLink>
                 </div>
             </div>
 
             {/* Socials */}
             <div>
-                <FooterHeader>Socials</FooterHeader>
+                <FooterHeader>Get in Touch</FooterHeader>
                 <div className="flex flex-col space-y-3">
-                    <FooterLink href="#">Facebook</FooterLink>
-                    <FooterLink href="#">Instagram</FooterLink>
-                    <FooterLink href="#">Twitter</FooterLink>
-                    <FooterLink href="#">LinkedIn</FooterLink>
+                    <FooterLink href="tel:+918595853918">+91 8595853918</FooterLink>
+                    <FooterLink href="tel:+919871358670">+91 9871358670</FooterLink>
+                    <FooterLink href="mailto:motorkhandelhi@gmail.com">motorkhandelhi@gmail.com</FooterLink>
                 </div>
             </div>
         </div>
