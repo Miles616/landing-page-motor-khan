@@ -67,7 +67,7 @@ export default function Footer() {
               "--x": `${coords.x}px`,
               "--y": `${coords.y}px`,
               fontSize: 'clamp(3rem, 12vw, 10rem)',
-              lineHeight: 1,
+              lineHeight: 1.5,
               background: `radial-gradient(400px circle at var(--x) var(--y), hsl(0 0% 100%) 0%, hsla(0, 0%, 100%, 0.1) 25%, transparent 50%)`,
               backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
