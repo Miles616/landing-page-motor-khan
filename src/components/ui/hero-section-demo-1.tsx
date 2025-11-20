@@ -11,10 +11,6 @@ import { Spotlight } from "./spotlight";
 export default function HeroSectionOne() {
   return (
     <div className="relative mx-auto flex max-w-7xl flex-col items-center justify-center">
-        <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
-          fill="rgba(120, 50, 50, 0.4)"
-        />
       <div className="absolute inset-y-0 left-0 h-full w-px bg-neutral-200/80 dark:bg-neutral-800/80">
         <div className="absolute top-0 h-40 w-px bg-gradient-to-b from-transparent via-primary to-transparent" />
       </div>
@@ -97,6 +93,12 @@ export default function HeroSectionOne() {
             <span>WhatsApp</span>
           </HoverBorderGradient>
         </motion.div>
+
+        <Spotlight
+          className="-top-40 left-0 md:left-60 md:-top-20"
+          fill="rgba(120, 50, 50, 0.4)"
+        />
+
         <motion.div
           initial={{
             opacity: 0,
