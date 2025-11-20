@@ -9,7 +9,6 @@ import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
 import { IconBrandWhatsapp } from '@tabler/icons-react';
 import { HoverBorderGradient } from '@/components/ui/hover-border-gradient';
-import Script from 'next/script';
 import { Toaster } from '@/components/ui/toaster';
 import { ContactForm } from '@/components/ui/contact-form';
 import { FloatingDock } from '@/components/ui/floating-dock';
@@ -29,7 +28,6 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background font-body font-thin">
-      <Script src="https://elfsightcdn.com/platform/js" strategy="lazyOnload" />
       <Toaster />
       <main className="flex-1 pb-20 md:pb-0">
         
@@ -126,3 +124,4 @@ export default function Home() {
   );
 
     
+

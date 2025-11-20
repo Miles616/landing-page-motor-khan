@@ -1,6 +1,7 @@
 
 import type {Metadata} from 'next';
 import './globals.css';
+import Script from 'next/script';
 
 export const metadata: Metadata = {
   title: "Car Denting & Painting in Rithala, Rohini - Motor Khan",
@@ -55,6 +56,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <Script src="https://elfsight.com/platform/js" strategy="beforeInteractive" />
       </head>
       <body className="font-body antialiased">{children}</body>
     </html>
