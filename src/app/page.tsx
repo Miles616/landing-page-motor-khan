@@ -14,6 +14,7 @@ import { ContactForm } from '@/components/ui/contact-form';
 import { FloatingDock } from '@/components/ui/floating-dock';
 import { Spotlight } from '@/components/ui/spotlight';
 import Footer from '@/components/ui/footer';
+import SparklesPreview from '@/components/sparkles-demo';
 
 
 export default function Home() {
@@ -44,7 +45,10 @@ export default function Home() {
         <HeroSectionOne />
 
         {/* Why Choose Us Section */}
-        <FeaturesSectionDemo />
+        <SparklesPreview>
+          <FeaturesSectionDemo />
+        </SparklesPreview>
+        
 
         {/* Customer Reviews Section */}
         <section className="w-full py-12 md:py-24">
@@ -124,5 +128,6 @@ export default function Home() {
   );
 
     
+
 
 
