@@ -141,7 +141,7 @@ export default function Home() {
                 <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1">
                     <Globe className="h-4 w-4" /> Main Website
                 </a>
-                <p>
+                <div className="inline">
                   © {new Date().getFullYear()}{" "}
                   <Spotlight>
                     <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">
@@ -149,7 +149,7 @@ export default function Home() {
                     </a>
                   </Spotlight>
                   . All Rights Reserved.
-                </p>
+                </div>
             </div>
         </div>
       </footer>
