@@ -7,9 +7,11 @@ import { cn } from "@/lib/utils";
 export const Spotlight = ({
   className,
   children,
+  fill,
 }: {
   className?: string;
   children?: React.ReactNode;
+  fill?: string;
 }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [size, setSize] = useState({ width: 0, height: 0 });
@@ -34,6 +36,20 @@ export const Spotlight = ({
     mouseX.set(clientX - left);
     mouseY.set(clientY - top);
   };
+
+  if (fill) {
+    return (
+      <motion.div
+        className={cn(
+          "animate-fade-in absolute h-full w-full",
+          className
+        )}
+        style={{
+          backgroundImage: `radial-gradient(ellipse 80% 50% at 50% 120%, ${fill}, transparent 80%)`,
+        }}
+      />
+    );
+  }
 
   return (
     <div
