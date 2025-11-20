@@ -13,6 +13,7 @@ import Script from 'next/script';
 import { Toaster } from '@/components/ui/toaster';
 import { ContactForm } from '@/components/ui/contact-form';
 import { FloatingDock } from '@/components/ui/floating-dock';
+import { Spotlight } from '@/components/ui/spotlight';
 
 
 export default function Home() {
@@ -27,7 +28,7 @@ export default function Home() {
 
   return (
     <div className="flex flex-col min-h-screen bg-background font-body font-thin">
-      <Script src="https://elfsightcdn.com/platform.js" strategy="lazyOnload" />
+      <Script src="https://elfsightcdn.com/platform/js" strategy="lazyOnload" />
       <Toaster />
       <main className="flex-1 pb-20 md:pb-0">
         
@@ -142,9 +143,11 @@ export default function Home() {
                 </a>
                 <p>
                   © {new Date().getFullYear()}{" "}
-                  <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">
-                    Motor Khan
-                  </a>
+                  <Spotlight>
+                    <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">
+                        Motor Khan
+                    </a>
+                  </Spotlight>
                   . All Rights Reserved.
                 </p>
             </div>
