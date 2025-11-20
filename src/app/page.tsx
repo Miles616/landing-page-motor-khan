@@ -120,8 +120,10 @@ export default function Home() {
         <div className="container flex flex-col items-center justify-center text-center gap-12">
             <Spotlight>
               <a href="https://motorkhan.com/" target="_blank" rel="noopener noreferrer">
-                <h2 className="text-6xl md:text-8xl font-black tracking-tighter text-white">
-                  Motor Khan
+                <h2 className="text-4xl md:text-8xl font-black tracking-tighter text-neutral-800 group-hover:text-white transition-colors duration-200">
+                  {'Motor Khan'.split('').map((char, index) => (
+                    <span key={index}>{char}</span>
+                  ))}
                 </h2>
               </a>
             </Spotlight>
