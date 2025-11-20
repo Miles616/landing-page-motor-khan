@@ -32,12 +32,8 @@ export default function Footer() {
     <footer className="bg-black border-t">
       <div className="container mx-auto px-4 pt-16">
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            {/* Logo and Copyright */}
             <div className="col-span-2 md:col-span-1">
-                <Link href="/" className="flex items-center gap-2 mb-4">
-                    <Image src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-lighttheme.png" alt="MOTOR KHAN Logo" width={60} height={16} className="dark:hidden" />
-                    <Image src="https://delhi.motorkhan.com/images/logo/motor-khan-rithala-rohini-delhi-darktheme.png" alt="MOTOR KHAN Logo" width={100} height={100} className="hidden dark:block object-contain" />
-                </Link>
+                
             </div>
             
             {/* Contact */}
