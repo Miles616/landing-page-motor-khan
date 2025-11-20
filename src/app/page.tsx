@@ -15,6 +15,7 @@ import { FloatingDock } from '@/components/ui/floating-dock';
 import { Spotlight } from '@/components/ui/spotlight';
 import Footer from '@/components/ui/footer';
 import SparklesPreview from '@/components/sparkles-demo';
+import { ElfsightWidget } from '@/components/ui/elfsight-widget';
 
 
 export default function Home() {
@@ -56,7 +57,7 @@ export default function Home() {
             <h2 className="text-3xl font-black italic tracking-tighter text-center sm:text-4xl md:text-5xl mb-12 font-headline uppercase">
               What Our Customers Say
             </h2>
-            <div className="elfsight-app-6cf42501-5de5-412b-bbe5-f462764accaa" data-elfsight-app-lazy></div>
+            <ElfsightWidget />
           </div>
         </section>
 
@@ -128,6 +129,7 @@ export default function Home() {
   );
 
     
+
 
 
 
