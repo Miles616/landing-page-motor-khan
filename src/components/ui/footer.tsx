@@ -40,7 +40,7 @@ export default function Footer() {
             <div>
                 <FooterHeader>Contact Us</FooterHeader>
                 <div className="flex flex-col space-y-3">
-                    <p className="text-sm text-muted-foreground">Shop No. 12, Near Rice Mill, Vijay Vihar Phase I, Block B, Rithala, Rohini, Delhi 110085, India</p>
+                    <FooterLink href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9">Shop No. 12, Near Rice Mill, Vijay Vihar Phase I, Block B, Rithala, Rohini, Delhi 110085, India</FooterLink>
                 </div>
             </div>
 
