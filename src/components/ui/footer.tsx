@@ -5,7 +5,7 @@ import Image from "next/image";
 import React, { useRef, useState } from "react";
 
 const FooterLink = ({ href, children }: { href: string, children: React.ReactNode }) => (
-  <Link href={href} className="text-muted-foreground hover:text-primary transition-colors text-sm">
+  <Link href={href} className="text-muted-foreground hover:text-primary transition-colors text-sm" target="_blank" rel="noopener noreferrer">
     {children}
   </Link>
 );
@@ -44,13 +44,14 @@ export default function Footer() {
                 </div>
             </div>
 
-            {/* Socials */}
+            {/* Get in Touch */}
             <div>
                 <FooterHeader>Get in Touch</FooterHeader>
                 <div className="flex flex-col space-y-3">
                     <FooterLink href="tel:+918595853918">+91 8595853918</FooterLink>
                     <FooterLink href="tel:+919871358670">+91 9871358670</FooterLink>
                     <FooterLink href="mailto:motorkhandelhi@gmail.com">motorkhandelhi@gmail.com</FooterLink>
+                    <FooterLink href="https://motorkhan.com/">Main Website</FooterLink>
                 </div>
             </div>
         </div>
