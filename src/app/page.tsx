@@ -16,6 +16,7 @@ import { Spotlight } from '@/components/ui/spotlight';
 import Footer from '@/components/ui/footer';
 import SparklesPreview from '@/components/sparkles-demo';
 import { ElfsightWidget } from '@/components/ui/elfsight-widget';
+import { Iphone } from "@/components/ui/iphone";
 
 
 export default function Home() {
@@ -97,6 +98,12 @@ export default function Home() {
               </HoverBorderGradient>
             </div>
             <div id="map" className="mt-8 space-y-4 max-w-2xl mx-auto">
+              <div className="w-full max-w-sm mx-auto p-4">
+                <Iphone
+                  showHeader
+                  imgUrl="https://delhi.motorkhan.com/images/landing-page/car-paint.png"
+                />
+              </div>
               <a href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-start justify-center gap-2">
                   <MapPin className="h-5 w-5 text-primary shrink-0" />
