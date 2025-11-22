@@ -57,26 +57,28 @@ export default function Footer() {
             </div>
         </div>
 
-        <div
-          ref={containerRef}
-          onMouseMove={handleMouseMove}
-          className="relative text-left"
-        >
-          <span
-            className="font-headline font-bold text-transparent transition-colors duration-300 inline-block w-full"
-            style={{
-              // @ts-ignore
-              "--x": `${coords.x}px`,
-              "--y": `${coords.y}px`,
-              fontSize: 'clamp(4rem, 18vw, 12rem)',
-              lineHeight: 1.2,
-              background: `radial-gradient(400px circle at var(--x) var(--y), hsl(0 0% 100%) 0%, hsla(0, 0%, 100%, 0.1) 25%, transparent 50%)`,
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
-            }}
-          >
-            MOTOR KHAN
-          </span>
+        <div className="overflow-hidden md:overflow-visible -mx-4 md:mx-0">
+            <div
+            ref={containerRef}
+            onMouseMove={handleMouseMove}
+            className="relative text-left px-4 md:px-0"
+            >
+            <span
+                className="font-headline font-bold text-transparent transition-colors duration-300 inline-block w-full"
+                style={{
+                // @ts-ignore
+                "--x": `${coords.x}px`,
+                "--y": `${coords.y}px`,
+                fontSize: 'clamp(4rem, 18vw, 12rem)',
+                lineHeight: 1.2,
+                background: `radial-gradient(400px circle at var(--x) var(--y), hsl(0 0% 100%) 0%, hsla(0, 0%, 100%, 0.1) 25%, transparent 50%)`,
+                backgroundClip: 'text',
+                WebkitBackgroundClip: 'text',
+                }}
+            >
+                MOTOR KHAN
+            </span>
+            </div>
         </div>
 
       </div>
