@@ -70,7 +70,7 @@ export default function Home() {
                 Ready for a Flawless Finish?
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-thin">
-                Fill out the form below or get in touch for a no-obligation estimate for your car.
+                Just fill out the form below, or give us a call to get a free estimate for your car.
               </p>
             </div>
             <div className="mx-auto w-full max-w-sm space-y-4">
