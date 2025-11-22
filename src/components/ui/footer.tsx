@@ -37,14 +37,6 @@ export default function Footer() {
                 
             </div>
             
-            {/* Contact */}
-            <div>
-                <FooterHeader>Contact Us</FooterHeader>
-                <div className="flex flex-col space-y-3">
-                    <FooterLink href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9">Shop No. 12, Near Rice Mill, Vijay Vihar Phase I, Block B, Rithala, Rohini, Delhi 110085, India</FooterLink>
-                </div>
-            </div>
-
             {/* Get in Touch */}
             <div>
                 <FooterHeader>Get in Touch</FooterHeader>
@@ -53,6 +45,14 @@ export default function Footer() {
                     <FooterLink href="tel:+919871358670">+91 9871358670</FooterLink>
                     <FooterLink href="mailto:motorkhandelhi@gmail.com">motorkhandelhi@gmail.com</FooterLink>
                     <FooterLink href="https://motorkhan.com/">Main Website</FooterLink>
+                </div>
+            </div>
+
+            {/* Contact */}
+            <div>
+                <FooterHeader>Contact Us</FooterHeader>
+                <div className="flex flex-col space-y-3">
+                    <FooterLink href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9">Shop No. 12, Near Rice Mill, Vijay Vihar Phase I, Block B, Rithala, Rohini, Delhi 110085, India</FooterLink>
                 </div>
             </div>
         </div>
