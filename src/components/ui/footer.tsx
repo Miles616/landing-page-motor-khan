@@ -63,7 +63,7 @@ export default function Footer() {
           className="relative text-left"
         >
           <span
-            className="font-headline font-bold text-transparent transition-colors duration-300"
+            className="font-headline font-bold text-transparent transition-colors duration-300 inline-block w-full"
             style={{
               // @ts-ignore
               "--x": `${coords.x}px`,
