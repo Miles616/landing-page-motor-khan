@@ -98,6 +98,9 @@ export default function Home() {
               </HoverBorderGradient>
             </div>
             <div id="map" className="mt-8 space-y-4 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-black italic tracking-tighter md:text-3xl/tight font-headline uppercase">
+                Find Us
+              </h3>
               <div className="w-full max-w-sm mx-auto p-4">
                 <Iphone showHeader>
                     <iframe 
