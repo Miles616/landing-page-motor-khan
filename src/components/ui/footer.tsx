@@ -60,7 +60,7 @@ export default function Footer() {
         <div
           ref={containerRef}
           onMouseMove={handleMouseMove}
-          className="relative text-center"
+          className="relative text-left"
         >
           <span
             className="font-headline font-bold text-transparent transition-colors duration-300"
