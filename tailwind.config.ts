@@ -10,13 +10,13 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['Manrope', 'sans-serif'],
+        headline: ['Manrope', 'sans-serif'],
         code: ['monospace'],
       },
       fontWeight: {
         thin: '400',
-        black: '900',
+        black: '800',
       },
       fontStyle: {
         italic: 'italic',
