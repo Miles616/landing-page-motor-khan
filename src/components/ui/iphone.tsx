@@ -1,3 +1,4 @@
+
 "use client";
 
 import type { HTMLAttributes } from "react";
@@ -118,7 +119,7 @@ export function Iphone({
             borderRadius: `${rX}% / ${rY}%`,
           }}
         >
-          <div className="size-full" style={{ paddingTop: `${notchHeight}%` }}>
+          <div className="size-full">
             {children}
           </div>
         </div>
