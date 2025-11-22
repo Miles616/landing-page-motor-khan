@@ -67,7 +67,7 @@ export default function Home() {
           <div className="container grid items-center justify-center gap-4 px-4 text-center md:px-6">
             <div className="space-y-3">
               <h2 className="text-3xl font-black italic tracking-tighter md:text-4xl/tight font-headline uppercase">
-                Get Your Free Quote Today
+                Ready for a Flawless Finish?
               </h2>
               <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed font-thin">
                 Fill out the form below or get in touch for a no-obligation estimate for your car.
