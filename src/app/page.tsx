@@ -17,7 +17,6 @@ import Footer from '@/components/ui/footer';
 import SparklesPreview from '@/components/sparkles-demo';
 import { ElfsightWidget } from '@/components/ui/elfsight-widget';
 import { Iphone } from "@/components/ui/iphone";
-import { StickyChat } from '@/components/ui/sticky-chat';
 
 
 export default function Home() {
@@ -116,7 +115,6 @@ export default function Home() {
               <a href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9" target="_blank" rel="noopener noreferrer">
                 <div className="flex items-start justify-center gap-2">
                   <MapPin className="h-5 w-5 text-primary shrink-0" />
-                  <p className="font-medium font-thin">Shop No 12, near Rice Mill, Vijay vihar Phase I, Block B, Rithala, Rohini, New Delhi, Delhi, 110085</p>
                 </div>
               </a>
             </div>
@@ -129,7 +127,6 @@ export default function Home() {
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
         <FloatingDock items={navItems} />
       </div>
-      <StickyChat />
     </div>
   );
 }
