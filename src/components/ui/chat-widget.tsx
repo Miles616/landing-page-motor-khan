@@ -67,7 +67,7 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
             <CardContent className="pr-2 pt-4">
             <div className="h-48 overflow-y-auto pr-4 text-sm text-muted-foreground space-y-3">
                 <div className="p-3 bg-muted rounded-lg max-w-max">
-                    <p>Ask me about services, booking, or our workshop hours!</p>
+                    <p>Hello! How can I help you today? Feel free to ask about our services, booking, or workshop hours.</p>
                 </div>
                 {reply && (
                     <div className="p-3 bg-primary text-primary-foreground rounded-lg max-w-max ml-auto">
