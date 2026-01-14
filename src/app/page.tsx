@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, MapPin, Star, Mail, Globe, Home as HomeIcon, MessageCircle } from 'lucide-react';
+import { Phone, MapPin, Star, Mail, Globe, Home as HomeIcon, MessageCircle, Bot } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
@@ -30,7 +30,8 @@ export default function Home() {
     { title: 'Location', link: 'https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9', icon: <MapPin className="h-5 w-5" /> },
     { title: 'WhatsApp', link: 'https://wa.me/918595853918', icon: <IconBrandWhatsapp className="h-5 w-5" /> },
     { title: 'Home', link: '/', icon: <HomeIcon className="h-7 w-7" /> },
-    { title: 'Chat', action: () => setIsChatOpen(true), icon: <MessageCircle className="h-5 w-5" /> },
+    { title: 'Email', link: 'mailto:motorkhandelhi@gmail.com', icon: <Mail className="h-5 w-5" /> },
+    { title: 'Chat', action: () => setIsChatOpen(true), icon: <Bot className="h-5 w-5" /> },
     { title: 'Call', link: 'tel:+919871358670', icon: <Phone className="h-5 w-5" /> },
   ];
 
