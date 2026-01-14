@@ -83,18 +83,22 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
                 <span className="sr-only">Close chat</span>
             </Button>
             </CardHeader>
-            <CardContent className="pr-2 pt-4">
-            <div className="h-48 overflow-y-auto pr-4 text-sm text-muted-foreground space-y-3">
+            <CardContent className="p-0">
+            <div className="h-64 overflow-y-auto p-4 text-sm text-muted-foreground space-y-3">
                 {conversation.map((message, index) => (
                     <div
                         key={index}
-                        className={`p-3 rounded-lg max-w-max ${
-                            message.sender === 'bot'
-                                ? 'bg-muted'
-                                : 'bg-primary text-primary-foreground ml-auto'
-                        }`}
+                        className={`flex ${message.sender === 'user' ? 'justify-end' : 'justify-start'}`}
                     >
-                        <p>{message.text}</p>
+                        <div
+                            className={`p-3 rounded-lg max-w-xs ${
+                                message.sender === 'bot'
+                                    ? 'bg-muted'
+                                    : 'bg-primary text-primary-foreground'
+                            }`}
+                        >
+                            <p>{message.text}</p>
+                        </div>
                     </div>
                 ))}
                 {loading && (
