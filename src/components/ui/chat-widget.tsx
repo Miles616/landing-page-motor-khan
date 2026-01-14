@@ -111,7 +111,7 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
                 {error && <p className="p-3 bg-destructive/20 text-destructive-foreground rounded-lg">{error}</p>}
             </div>
             </CardContent>
-            <CardFooter className="pt-4 border-t border-white/10">
+            <CardFooter className="p-2 border-t border-white/10">
             <form onSubmit={handleSend} className="flex gap-2 w-full">
                 <Input
                 value={msg}
