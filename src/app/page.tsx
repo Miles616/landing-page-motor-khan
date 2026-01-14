@@ -17,6 +17,7 @@ import Footer from '@/components/ui/footer';
 import SparklesPreview from '@/components/sparkles-demo';
 import { ElfsightWidget } from '@/components/ui/elfsight-widget';
 import { Iphone } from "@/components/ui/iphone";
+import { StickyChat } from '@/components/ui/sticky-chat';
 
 
 export default function Home() {
@@ -128,6 +129,7 @@ export default function Home() {
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
         <FloatingDock items={navItems} />
       </div>
+      <StickyChat />
     </div>
   );
 }
