@@ -30,7 +30,16 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
 
     try {
       const data = await sendChat(msg);
-      setReply(data.reply);
+      // The webhook might return a string directly instead of JSON
+      if (typeof data === 'string') {
+        setReply(data);
+      } else if (data.reply) {
+        setReply(data.reply);
+      } else {
+        // Handle cases where the reply is in a different format or missing
+        const responseText = JSON.stringify(data);
+        setReply(`Received an unexpected response: ${responseText}`);
+      }
     } catch (err) {
       setError("Sorry, I couldn't get a response. Please try again.");
     } finally {
@@ -47,28 +56,34 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
         transition={{ duration: 0.3, ease: "easeOut" }}
         className="fixed bottom-24 right-6 z-40"
     >
-        <Card className="w-80 md:w-96 shadow-xl">
-            <CardHeader className="flex flex-row items-center justify-between pb-2">
-            <CardTitle className="text-lg font-bold">Motor Khan Assistant</CardTitle>
+        <Card className="w-80 md:w-96 shadow-xl border border-white/10">
+            <CardHeader className="flex flex-row items-center justify-between pb-2 border-b border-white/10">
+            <CardTitle className="text-lg font-bold">Motor Khan Bot</CardTitle>
             <Button variant="ghost" size="icon" onClick={onClose} className="h-8 w-8">
                 <X className="h-5 w-5" />
                 <span className="sr-only">Close chat</span>
             </Button>
             </CardHeader>
-            <CardContent className="pr-2">
-            <div className="h-48 overflow-y-auto pr-4 text-sm text-muted-foreground space-y-2">
-                <p className="p-2 bg-muted rounded-lg">Ask me about services, booking, or our workshop hours!</p>
-                {reply && <p className="p-2 bg-muted rounded-lg">{reply}</p>}
+            <CardContent className="pr-2 pt-4">
+            <div className="h-48 overflow-y-auto pr-4 text-sm text-muted-foreground space-y-3">
+                <div className="p-3 bg-muted rounded-lg max-w-max">
+                    <p>Ask me about services, booking, or our workshop hours!</p>
+                </div>
+                {reply && (
+                    <div className="p-3 bg-primary text-primary-foreground rounded-lg max-w-max ml-auto">
+                        <p>{reply}</p>
+                    </div>
+                )}
                 {loading && (
-                    <div className="flex items-center gap-2 p-2">
+                    <div className="flex items-center gap-2 p-3">
                         <Loader className="w-4 h-4 animate-spin" />
                         <span>Typing...</span>
                     </div>
                 )}
-                {error && <p className="p-2 bg-destructive/20 text-destructive-foreground rounded-lg">{error}</p>}
+                {error && <p className="p-3 bg-destructive/20 text-destructive-foreground rounded-lg">{error}</p>}
             </div>
             </CardContent>
-            <CardFooter>
+            <CardFooter className="pt-4 border-t border-white/10">
             <form onSubmit={handleSend} className="flex gap-2 w-full">
                 <Input
                 value={msg}

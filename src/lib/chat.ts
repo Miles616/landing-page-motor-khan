@@ -13,7 +13,6 @@ export async function sendChat(message: string) {
     return JSON.parse(text);
   } catch (e) {
     // If it's not JSON, it might be a plain text reply.
-    // The user's example returns { "reply": "..." }, so we wrap it.
     return { reply: text };
   }
 }
