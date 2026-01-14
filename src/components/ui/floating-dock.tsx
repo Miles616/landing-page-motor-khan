@@ -89,18 +89,18 @@ function IconContainer({
     damping: 12,
   });
 
-  const [hovered, setHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);
 
   const content = (
     <motion.div
       ref={ref}
       style={{ width, height }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       className="relative flex aspect-square items-center justify-center rounded-full bg-neutral-800/80 cursor-pointer"
     >
       <AnimatePresence>
-        {hovered && (
+        {isHovered && mouseX.get() !== Infinity && (
           <motion.div
             initial={{ opacity: 0, y: 10, x: "-50%" }}
             animate={{ opacity: 1, y: 0, x: "-50%" }}
