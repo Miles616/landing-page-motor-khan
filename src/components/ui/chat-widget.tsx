@@ -1,7 +1,7 @@
 
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { Send, X, Loader } from "lucide-react";
 import { sendChat } from "@/lib/chat";
@@ -26,6 +26,16 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
   ]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  useEffect(() => {
+    scrollToBottom();
+  }, [conversation, loading]);
+
 
   async function handleSend(e: React.FormEvent) {
     e.preventDefault();
@@ -93,6 +103,7 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
                         <span>Typing...</span>
                     </div>
                 )}
+                 <div ref={messagesEndRef} />
                 {error && <p className="p-3 bg-destructive/20 text-destructive-foreground rounded-lg">{error}</p>}
             </div>
             </CardContent>
