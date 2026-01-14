@@ -14,9 +14,16 @@ interface ChatWidgetProps {
     onClose: () => void;
 }
 
+type Message = {
+    sender: 'user' | 'bot';
+    text: string;
+};
+
 export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
   const [msg, setMsg] = useState("");
-  const [reply, setReply] = useState<string | null>(null);
+  const [conversation, setConversation] = useState<Message[]>([
+    { sender: 'bot', text: "Hello! How can I help you today?" }
+  ]);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -24,27 +31,29 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
     e.preventDefault();
     if (!msg.trim()) return;
 
+    const userMessage: Message = { sender: 'user', text: msg };
+    setConversation(prev => [...prev, userMessage]);
+    setMsg("");
     setLoading(true);
     setError(null);
-    setReply(null);
 
     try {
       const data = await sendChat(msg);
-      // The webhook might return a string directly instead of JSON
+      let botReply = "";
       if (typeof data === 'string') {
-        setReply(data);
+        botReply = data;
       } else if (data.reply) {
-        setReply(data.reply);
+        botReply = data.reply;
       } else {
-        // Handle cases where the reply is in a different format or missing
         const responseText = JSON.stringify(data);
-        setReply(`Received an unexpected response: ${responseText}`);
+        botReply = `Received an unexpected response: ${responseText}`;
       }
+      const botMessage: Message = { sender: 'bot', text: botReply };
+      setConversation(prev => [...prev, botMessage]);
     } catch (err) {
       setError("Sorry, I couldn't get a response. Please try again.");
     } finally {
       setLoading(false);
-      setMsg("");
     }
   }
 
@@ -66,14 +75,18 @@ export default function ChatWidget({ isOpen, onClose }: ChatWidgetProps) {
             </CardHeader>
             <CardContent className="pr-2 pt-4">
             <div className="h-48 overflow-y-auto pr-4 text-sm text-muted-foreground space-y-3">
-                <div className="p-3 bg-muted rounded-lg max-w-max">
-                    <p>Hello! How can I help you today? Feel free to ask about our services, booking, or workshop hours.</p>
-                </div>
-                {reply && (
-                    <div className="p-3 bg-primary text-primary-foreground rounded-lg max-w-max ml-auto">
-                        <p>{reply}</p>
+                {conversation.map((message, index) => (
+                    <div
+                        key={index}
+                        className={`p-3 rounded-lg max-w-max ${
+                            message.sender === 'bot'
+                                ? 'bg-muted'
+                                : 'bg-primary text-primary-foreground ml-auto'
+                        }`}
+                    >
+                        <p>{message.text}</p>
                     </div>
-                )}
+                ))}
                 {loading && (
                     <div className="flex items-center gap-2 p-3">
                         <Loader className="w-4 h-4 animate-spin" />
