@@ -16,7 +16,7 @@ export const FloatingDock = ({
   items,
   className,
 }: {
-  items: { title: string; icon: React.ReactNode; link: string }[];
+  items: { title: string; icon: React.ReactNode; link?: string; action?: () => void }[];
   className?: string;
 }) => {
   let mouseX = useMotionValue(Infinity);
@@ -41,11 +41,13 @@ function IconContainer({
   title,
   icon,
   link,
+  action,
 }: {
   mouseX: MotionValue;
   title: string;
   icon: React.ReactNode;
-  link: string;
+  link?: string;
+  action?: () => void;
 }) {
   let ref = useRef<HTMLDivElement>(null);
 
@@ -89,37 +91,49 @@ function IconContainer({
 
   const [hovered, setHovered] = useState(false);
 
-  return (
-    <a href={link}
-      target={link.startsWith("http") || link.startsWith("tel") ? "_blank" : "_self"}
-      rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
+  const content = (
+    <motion.div
+      ref={ref}
+      style={{ width, height }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      className="relative flex aspect-square items-center justify-center rounded-full bg-neutral-800/80 cursor-pointer"
     >
+      <AnimatePresence>
+        {hovered && (
+          <motion.div
+            initial={{ opacity: 0, y: 10, x: "-50%" }}
+            animate={{ opacity: 1, y: 0, x: "-50%" }}
+            exit={{ opacity: 0, y: 2, x: "-50%" }}
+            className="absolute -top-8 left-1/2 w-fit rounded-md border border-neutral-900 bg-neutral-800/80 px-2 py-0.5 text-xs whitespace-pre text-white backdrop-blur-md"
+          >
+            {title}
+          </motion.div>
+        )}
+      </AnimatePresence>
       <motion.div
-        ref={ref}
-        style={{ width, height }}
-        onMouseEnter={() => setHovered(true)}
-        onMouseLeave={() => setHovered(false)}
-        className="relative flex aspect-square items-center justify-center rounded-full bg-neutral-800/80"
+        style={{ width: widthIcon, height: heightIcon }}
+        className="flex items-center justify-center"
       >
-        <AnimatePresence>
-          {hovered && (
-            <motion.div
-              initial={{ opacity: 0, y: 10, x: "-50%" }}
-              animate={{ opacity: 1, y: 0, x: "-50%" }}
-              exit={{ opacity: 0, y: 2, x: "-50%" }}
-              className="absolute -top-8 left-1/2 w-fit rounded-md border border-neutral-900 bg-neutral-800/80 px-2 py-0.5 text-xs whitespace-pre text-white backdrop-blur-md"
-            >
-              {title}
-            </motion.div>
-          )}
-        </AnimatePresence>
-        <motion.div
-          style={{ width: widthIcon, height: heightIcon }}
-          className="flex items-center justify-center"
-        >
-          {icon}
-        </motion.div>
+        {icon}
       </motion.div>
-    </a>
+    </motion.div>
   );
+
+  if (link) {
+    return (
+        <a href={link}
+        target={link.startsWith("http") || link.startsWith("tel") ? "_blank" : "_self"}
+        rel={link.startsWith("http") ? "noopener noreferrer" : undefined}
+        >
+            {content}
+        </a>
+    );
+  }
+
+  if (action) {
+    return <div onClick={action}>{content}</div>
+  }
+
+  return content;
 }

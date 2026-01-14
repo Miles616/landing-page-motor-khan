@@ -2,7 +2,6 @@
 import type {Metadata} from 'next';
 import './globals.css';
 import Script from 'next/script';
-import ChatWidget from "@/components/ui/chat-widget";
 
 export const metadata: Metadata = {
   title: "Car Denting & Painting in Rithala, Rohini - Motor Khan",
@@ -61,7 +60,6 @@ export default function RootLayout({
       </head>
       <body className="font-body antialiased">
         {children}
-        <ChatWidget />
       </body>
     </html>
   );

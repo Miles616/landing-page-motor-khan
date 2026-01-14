@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Phone, MapPin, Star, Mail, Globe, Home as HomeIcon } from 'lucide-react';
+import { Phone, MapPin, Star, Mail, Globe, Home as HomeIcon, MessageCircle } from 'lucide-react';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
 import FeaturesSectionDemo from '@/components/ui/features-section-demo-3';
 import HeroSectionOne from '@/components/ui/hero-section-demo-1';
@@ -17,15 +17,20 @@ import Footer from '@/components/ui/footer';
 import SparklesPreview from '@/components/sparkles-demo';
 import { ElfsightWidget } from '@/components/ui/elfsight-widget';
 import { Iphone } from "@/components/ui/iphone";
+import ChatWidget from '@/components/ui/chat-widget';
+import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 
 export default function Home() {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
   const workshopImage = PlaceHolderImages.find(p => p.id === 'workshop-photo');
   const navItems = [
     { title: 'Location', link: 'https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9', icon: <MapPin className="h-5 w-5" /> },
     { title: 'WhatsApp', link: 'https://wa.me/918595853918', icon: <IconBrandWhatsapp className="h-5 w-5" /> },
     { title: 'Home', link: '/', icon: <HomeIcon className="h-7 w-7" /> },
-    { title: 'Contact', link: '#contact', icon: <Mail className="h-5 w-5" /> },
+    { title: 'Chat', action: () => setIsChatOpen(true), icon: <MessageCircle className="h-5 w-5" /> },
     { title: 'Call', link: 'tel:+919871358670', icon: <Phone className="h-5 w-5" /> },
   ];
 
@@ -112,11 +117,6 @@ export default function Home() {
                     ></iframe>
                 </Iphone>
               </div>
-              <a href="https://maps.app.goo.gl/tBfGy2pgqQvTeM7n9" target="_blank" rel="noopener noreferrer">
-                <div className="flex items-start justify-center gap-2">
-                  <MapPin className="h-5 w-5 text-primary shrink-0" />
-                </div>
-              </a>
             </div>
           </div>
         </section>
@@ -127,6 +127,15 @@ export default function Home() {
       <div className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
         <FloatingDock items={navItems} />
       </div>
+
+      <AnimatePresence>
+        {isChatOpen && (
+            <ChatWidget
+              isOpen={isChatOpen}
+              onClose={() => setIsChatOpen(false)}
+            />
+        )}
+      </AnimatePresence>
     </div>
   );
 }
